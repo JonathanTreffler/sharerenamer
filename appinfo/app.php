@@ -14,6 +14,6 @@ if (isset($request->server['REQUEST_URI'])) {
 	$url = $request->server['REQUEST_URI'];
 	if (preg_match('%apps/files(/.*)?%', $url)) {
 		Util::addScript($appName, 'sharerenamer');
-		Util::addStyle($appName, 'sharerenamer');
+		// Util::addStyle($appName, 'sharerenamer');
 	}
 }
