@@ -53,6 +53,7 @@ ShareRenamerFiles.hijackShare = function () {
 					'<input id="linkRenamerButton" type="button" class="button" value="' + t('core', 'Share link') + ': ' + t('core', 'Rename').toLowerCase() + '" />' +
 					'<input id="ShareRenamerNew" type="text" class="hidden" placeholder="' + token + '" autocomplete="off" spellcheck="false" autocorrect="off" />' +
 					'<input id="ShareRenamerSave" type="button" class="button hidden" value="' + t('core', 'Rename') + '" />' +
+					'<input id="ShareRenamerCancel" type="button" class="button hidden" value="' + t('core', 'Cancel') + '" />' +
 				'</div><br>';
 			$linkText.after($linkRenamerButtonElement);
 		}
@@ -67,7 +68,12 @@ ShareRenamerFiles.hijackShare = function () {
 			$('#linkRenamerButton').hide();
 			$('#ShareRenamerNew').show();
 			$('#ShareRenamerSave').show();
+			$('#ShareRenamerCancel').show();
 			$('#ShareRenamerNew').focus();
+		});
+		$('#ShareRenamerCancel').click(function () {
+			$('#ShareRenamerNew').val('');
+			$('#ShareRenamerSave').click();
 		});
 		$('#ShareRenamerSave').click(function () {
 			$('#shareTabView input').attr('disabled', false);
@@ -101,6 +107,7 @@ ShareRenamerFiles.hijackShare = function () {
 			$('#linkRenamerButton').show();
 			$('#ShareRenamerNew').hide();
 			$('#ShareRenamerSave').hide();
+			$('#ShareRenamerCancel').hide();
 		});
 
 		return r;
