@@ -3,7 +3,7 @@
 var ShareRenamer = function(baseUrl) {
 	this._baseUrl = baseUrl;
 };
-
+ 
 ShareRenamer.prototype = {
 	Rename: function(old_token, new_token) {
 		// this._baseUrl already ends with /rename, found in routes.php
