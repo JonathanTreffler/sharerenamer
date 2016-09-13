@@ -13,7 +13,7 @@ $request = $c->query('Request');
 if (isset($request->server['REQUEST_URI'])) {
 	$url = $request->server['REQUEST_URI'];
 	if (preg_match('%apps/files(/.*)?%', $url)) {
+		// add script only when in Files app
 		Util::addScript($appName, 'sharerenamer');
-		// Util::addStyle($appName, 'sharerenamer');
 	}
 }
