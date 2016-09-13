@@ -16,9 +16,9 @@ class ShareRenamerMapper extends Mapper {
 		$sql = $this->db->prepare($sql);
 		$sql->bindParam(1, $newtoken, \PDO::PARAM_STR);
 		$sql->execute();
-        $row = $sql->fetch();
-        $sql->closeCursor();
-		$alreadyexists = $row['n']; // return 0 or 1
+		$row = $sql->fetch();
+		$sql->closeCursor();
+		$alreadyexists = $row['n']; // returns 0 or 1
 
 		if ($alreadyexists == '1') {
 			return 'exists';
