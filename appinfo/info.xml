@@ -6,7 +6,7 @@
 	</description>
 	<licence>AGPL</licence>
 	<author>Fallon Turner</author>
-	<version>1.0</version>
+	<version>1.1</version>
 	<namespace>ShareRenamer</namespace>
 	<category>Tool</category>
 	<dependencies>
