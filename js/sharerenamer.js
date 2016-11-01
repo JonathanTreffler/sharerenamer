@@ -3,7 +3,7 @@
 var ShareRenamer = function(baseUrl) {
 	this._baseUrl = baseUrl;
 };
- 
+
 ShareRenamer.prototype = {
 	Rename: function(old_token, new_token) {
 		// this._baseUrl already ends with /rename, found in routes.php
@@ -82,12 +82,16 @@ ShareRenamerFiles.hijackShare = function () {
 			var old_token = linktxt.substr(n + 1);
 			var new_token = $('#ShareRenamerNew').val();
 			var rx = /^[a-zA-Z0-9]+$/g;
-			if (new_token != '' && !rx.test(new_token)) {
+
+			if (new_token == old_token) {
+				$('#ShareRenamerNew').val('');
+
+			} else if (new_token != '' && !rx.test(new_token)) {
 				alert(t('core', 'Only %s is available.').replace('%s', 'a-z, A-Z, 0-9'));
 				$('#ShareRenamerNew').select();
 				return false;
-			}
-			if (new_token != '') {
+
+			} else if (new_token != '') {
 				var init = new ShareRenamer(OC.generateUrl('/apps/sharerenamer/rename'));
 				var exec = init.Rename(old_token, new_token);
 
