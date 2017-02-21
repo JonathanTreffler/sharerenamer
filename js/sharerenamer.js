@@ -83,13 +83,13 @@ ShareRenamerFiles.hijackShare = function () {
 			var n = linktxt.lastIndexOf("/");
 			var old_token = linktxt.substr(n + 1);
 			var new_token = $('#ShareRenamerNew').val();
-			var rx = /^[a-zA-Z0-9]+$/g;
+			var rx = /^[a-zA-Z0-9\-_]+$/g;
 
 			if (new_token == old_token) {
 				$('#ShareRenamerNew').val('');
 
 			} else if (new_token != '' && !rx.test(new_token)) {
-				alert(t('core', 'Only %s is available.').replace('%s', 'a-z, A-Z, 0-9'));
+				alert(t('core', 'Only %s is available.').replace('%s', 'a-z, A-Z, 0-9, -, _'));
 				$('#ShareRenamerNew').select();
 				return false;
 
