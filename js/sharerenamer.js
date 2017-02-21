@@ -77,6 +77,19 @@ ShareRenamerFiles.hijackShare = function () {
 			$('#ShareRenamerNew').val('');
 			$('#ShareRenamerSave').click();
 		});
+		$('#ShareRenamerNew').keyup(function () {
+			var rx = /^[a-zA-Z0-9\-_]+$/g;
+			if ($(this).val() != '' && !rx.test($(this).val())) {
+				$(this).tooltip({
+					placement: 'bottom',
+					trigger: 'manual',
+					title: t('core', 'Only %s is available.').replace('%s', ' a-z, A-Z, 0-9, -, _ ')
+				});
+				$(this).tooltip('show');
+			} else {
+				$(this).tooltip('hide');
+			}
+		});
 		$('#ShareRenamerSave').click(function () {
 			$('#shareTabView input').attr('disabled', false);
 			var linktxt = $('.linkText').val();
@@ -89,7 +102,7 @@ ShareRenamerFiles.hijackShare = function () {
 				$('#ShareRenamerNew').val('');
 
 			} else if (new_token != '' && !rx.test(new_token)) {
-				alert(t('core', 'Only %s is available.').replace('%s', 'a-z, A-Z, 0-9, -, _'));
+				// tooltip is shown, so just don't do anything
 				$('#ShareRenamerNew').select();
 				return false;
 
