@@ -51,7 +51,7 @@ ShareRenamerFiles.hijackShare = function () {
 			$linkRenamerButtonElement = 
 				'<br>' +
 				'<div id="ShareRenamerDiv">' +
-					'<input id="linkRenamerButton" type="button" class="button" value="' + t('core', 'Share link') + ': ' + t('core', 'Rename').toLowerCase() + '" />' +
+					'<input id="linkRenamerButton" type="button" class="button" value="' + t('core', 'link') + ': ' + t('core', 'Rename').toLowerCase() + '" />' +
 					'<input id="ShareRenamerNew" type="text" class="hidden" placeholder="' + token + '" autocomplete="off" spellcheck="false" autocorrect="off" />' +
 					'<br>' +
 					'<input id="ShareRenamerSave" type="button" class="button hidden" value="' + t('core', 'Rename') + '" />' +
