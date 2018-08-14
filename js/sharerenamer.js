@@ -34,11 +34,25 @@ ShareRenamerFiles.hijackShare = function () {
 	var ShareDialogLinkShareViewRender = OC.Share.ShareDialogLinkShareView.prototype.render;
 	OC.Share.ShareDialogLinkShareView.prototype.render = function () {
 		var r = ShareDialogLinkShareViewRender.apply(this, arguments);
+
 		var $linkRenamerButtonElement = this.$el.find('#linkRenamerButton');
+		var $linkTextMenu = this.$el.find('.linkTextMenu');
+		var $clipboardButtonMenuItem = this.$el.find('.clipboardButton').parent();
 		var $ShareRenamerDiv = this.$el.find('#ShareRenamerDiv');
 		var $linkText = this.$el.find('.linkText');
 		var $checkBox = this.$el.find('.linkCheckbox');
 		var fileInfoModel = this.model.fileInfoModel;
+
+		$linkTextMenu.removeClass('hidden');
+
+		$shareRenamerButtonMenuItem = 
+		'<li>' +
+			'<a href="#" name="startShareRenamer" class="menuitem">' +
+				'<span class="icon icon-edit"></span>' + 
+				'<span>' + t('core', 'Link') + ' ' + t('core', 'Rename').toLowerCase() + '</span>' + 
+			'</a>' +
+		'</li>';
+		$clipboardButtonMenuItem.after($shareRenamerButtonMenuItem);
 
 		if (!$linkRenamerButtonElement.length) {
 			var linktxt = $linkText.val();
@@ -49,22 +63,22 @@ ShareRenamerFiles.hijackShare = function () {
 				var token = linktxt.substr(n + 1);
 			}
 			$linkRenamerButtonElement = 
-				'<br>' +
-				'<div id="ShareRenamerDiv">' +
+				'<li>' +
+				'<span>' +
 					'<input id="linkRenamerButton" type="button" class="button" value="' + t('core', 'Link') + ' ' + t('core', 'Rename').toLowerCase() + '" />' +
 					'<input id="ShareRenamerNew" type="text" class="hidden" placeholder="' + token + '" autocomplete="off" spellcheck="false" autocorrect="off" />' +
 					'<br>' +
 					'<input id="ShareRenamerSave" type="button" class="button hidden" value="' + t('core', 'Rename') + '" />' +
 					'<input id="ShareRenamerCancel" type="button" class="button hidden" value="' + t('core', 'Cancel') + '" />' +
-				'</div><br>';
-			$linkText.after($linkRenamerButtonElement);
+				'</span></li>';
+			$linkTextMenu.after($linkRenamerButtonElement);
 		}
 
-		if ($checkBox.is(':checked')) {
-			$('#ShareRenamerDiv').show();
-		} else {
-			$('#ShareRenamerDiv').hide();
-		}
+		// if ($checkBox.is(':checked')) {
+		// 	$('#ShareRenamerDiv').show();
+		// } else {
+		// 	$('#ShareRenamerDiv').hide();
+		// }
 
 		$('#linkRenamerButton').click(function () {
 			$('#linkRenamerButton').hide();

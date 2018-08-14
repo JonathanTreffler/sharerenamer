@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.0
+## Changed
+- Nextcloud 14 compatibility
+- Changed workflow of renaming a link
+
 ## 1.4.0
 ### Changed
 - Link rename button title changed
