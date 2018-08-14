@@ -1,4 +1,4 @@
-# Files Share Link Renamer
+# ShareRenamer
 ## A simple and fast share link renamer add-in for the Files app in Nextcloud
 
 ![](screenshots/sharerenamer.png)
