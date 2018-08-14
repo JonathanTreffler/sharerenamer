@@ -1,14 +1,16 @@
 <?xml version="1.0"?>
-<info>
+<info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
 	<id>sharerenamer</id>
 	<name>ShareRenamer</name>
+	<summary>A simple and fast share link renamer add-in for the Files app</summary>
 	<description>This is an add-in to the Files app, which allows you to customize your share tokens, so your links can be https://cloud.de/s/mysharedlink instead of https://cloud.ede/s/qPv1SwbU5M2YEoJZ. Just share a file or folder (or click an already shared one) and a new button will appear below the share link URL in the sidebar of the Files app.
 	</description>
 	<licence>AGPL</licence>
 	<author>Fallon Turner</author>
-	<author>LazyShpee</author>
-	<author>DecaTec</author>
-	<version>1.3.1</version>
+	<author homepage="https://github.com/LazyShpee">LazyShpee</author>
+	<author homepage="https://decatec.de">DecaTec</author>
+	<version>1.4.0</version>
 	<namespace>ShareRenamer</namespace>
 	<category>Tool</category>
 	<website>https://github.com/DecaTec/sharerenamer</website>
