@@ -38,16 +38,13 @@ ShareRenamerFiles.hijackShare = function () {
 		var $linkRenamerButtonElement = this.$el.find('#linkRenamerButton');
 		var $linkTextMenu = this.$el.find('.linkTextMenu');
 		var $clipboardButtonMenuItem = this.$el.find('.clipboardButton').parent();
-		var $ShareRenamerDiv = this.$el.find('#ShareRenamerDiv');
 		var $linkText = this.$el.find('.linkText');
 		var $checkBox = this.$el.find('.linkCheckbox');
 		var fileInfoModel = this.model.fileInfoModel;
 
-		$linkTextMenu.removeClass('hidden');
-
 		$shareRenamerButtonMenuItem = 
 		'<li>' +
-			'<a href="#" name="startShareRenamer" class="menuitem">' +
+			'<a href="#" id="startShareRenamer" class="menuitem">' +
 				'<span class="icon icon-edit"></span>' + 
 				'<span>' + t('core', 'Link') + ' ' + t('core', 'Rename').toLowerCase() + '</span>' + 
 			'</a>' +
@@ -65,7 +62,7 @@ ShareRenamerFiles.hijackShare = function () {
 			$linkRenamerButtonElement = 
 				'<li>' +
 				'<span>' +
-					'<input id="linkRenamerButton" type="button" class="button" value="' + t('core', 'Link') + ' ' + t('core', 'Rename').toLowerCase() + '" />' +
+					'<input id="linkRenamerButton" type="button" class="hidden button" value="' + t('core', 'Link') + ' ' + t('core', 'Rename').toLowerCase() + '" />' +
 					'<input id="ShareRenamerNew" type="text" class="hidden" placeholder="' + token + '" autocomplete="off" spellcheck="false" autocorrect="off" />' +
 					'<br>' +
 					'<input id="ShareRenamerSave" type="button" class="button hidden" value="' + t('core', 'Rename') + '" />' +
@@ -74,11 +71,10 @@ ShareRenamerFiles.hijackShare = function () {
 			$linkTextMenu.after($linkRenamerButtonElement);
 		}
 
-		// if ($checkBox.is(':checked')) {
-		// 	$('#ShareRenamerDiv').show();
-		// } else {
-		// 	$('#ShareRenamerDiv').hide();
-		// }
+		$('#startShareRenamer').click(function () {			
+			$linkTextMenu.toggleClass('hidden');
+			$('#linkRenamerButton').toggleClass('hidden');
+		});
 
 		$('#linkRenamerButton').click(function () {
 			$('#linkRenamerButton').hide();
