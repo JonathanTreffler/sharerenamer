@@ -21,7 +21,7 @@ ShareRenamer.prototype = {
 		});
 
 		request.fail(function( jqXHR, textStatus ) {
-			alert(t('core', 'Error') + ': ' + textStatus);
+			OC.Notification.show(t('core', 'Error') + ': ' + textStatus);
 		});
 		
 		return result;
@@ -130,7 +130,7 @@ ShareRenamerFiles.hijackShare = function () {
 					$('#ShareRenamerNew').attr('placeholder', new_token);
 					$('#ShareRenamerNew').val('');
 				} else if (exec == 'exists') {
-					alert(t('files', '{newname} already exists').replace('{newname}', "'" + new_token + "'") + '.');
+					OC.Notification.showHtml(t('files', 'Link {newname} already exists.<br>Please choose another link name.').replace('{newname}', "'" + new_token + "'") + '.');
 					$('#ShareRenamerNew').select();
 					return false;
 				} else if (exec == 'error') {
