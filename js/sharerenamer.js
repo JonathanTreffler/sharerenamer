@@ -35,12 +35,13 @@ ShareRenamerFiles.hijackShare = function () {
 	OC.Share.ShareDialogLinkShareView.prototype.render = function () {
 		var r = ShareDialogLinkShareViewRender.apply(this, arguments);
 
-		var $linkRenamerButtonElement = this.$el.find('#linkRenamerButton');
+		//var $startShareRenamer = this.$el.find('#startShareRenamer');
+		var $shareRenamerMenuItem = this.$el.find('#shareRenamerMenuItem');
+		var $shareRenamerMenuItem2 = this.$el.find('#shareRenamerMenuItem2');
+		var $shareRenamerMenuItem3 = this.$el.find('#shareRenamerMenuItem3');
 		var $linkTextMenu = this.$el.find('.linkTextMenu');
 		var $clipboardButtonMenuItem = this.$el.find('.clipboardButton').parent();
 		var $linkText = this.$el.find('.linkText');
-		var $checkBox = this.$el.find('.linkCheckbox');
-		var fileInfoModel = this.model.fileInfoModel;
 
 		$shareRenamerButtonMenuItem = 
 		'<li>' +
@@ -51,42 +52,45 @@ ShareRenamerFiles.hijackShare = function () {
 		'</li>';
 		$clipboardButtonMenuItem.after($shareRenamerButtonMenuItem);
 
-		if (!$linkRenamerButtonElement.length) {
-			var linktxt = $linkText.val();
-			if (linktxt == "" || linktxt == null || linktxt == false || typeof(linktxt) == 'undefined') {
-				var token = '???';
-			} else {
-				var n = linktxt.lastIndexOf("/");
-				var token = linktxt.substr(n + 1);
-			}
-			$linkRenamerButtonElement = 
-				'<li>' +
-				'<span>' +
-					'<input id="linkRenamerButton" type="button" class="hidden button" value="' + t('core', 'Link') + ' ' + t('core', 'Rename').toLowerCase() + '" />' +
-					'<input id="ShareRenamerNew" type="text" class="hidden" placeholder="' + token + '" autocomplete="off" spellcheck="false" autocorrect="off" />' +
-					'<br>' +
-					'<input id="ShareRenamerSave" type="button" class="button hidden" value="' + t('core', 'Rename') + '" />' +
-					'<input id="ShareRenamerCancel" type="button" class="button hidden" value="' + t('core', 'Cancel') + '" />' +
-				'</span></li>';
-			$linkTextMenu.after($linkRenamerButtonElement);
+		var linktxt = $linkText.val();
+		if (linktxt == "" || linktxt == null || linktxt == false || typeof(linktxt) == 'undefined') {
+			var token = '???';
+		} else {
+			var n = linktxt.lastIndexOf("/");
+			var token = linktxt.substr(n + 1);
 		}
+		$linkRenamerButtonElement = 
+			'<li id="shareRenamerMenuItem class="hidden">' +
+			'<span id="shareRenamerSpan" class="hidden menuitem">' +					
+				'<input id="ShareRenamerNew" type="text" class="hidden" placeholder="' + token + '" autocomplete="off" spellcheck="false" autocorrect="off" />' +
+				'</span></li><li id="shareRenamerMenuItem2"><span class="menuitem">' +
+				'<input id="ShareRenamerSave" type="button" class="hidden button" value="' + t('core', 'Rename') + '" />' +
+				'</span></li><li id="shareRenamerMenuItem3"><span class="menuitem"><input id="ShareRenamerCancel" type="button" class="hidden button" value="' + t('core', 'Cancel') + '" />' +
+			'</span></li>';
+		$linkTextMenu.after($linkRenamerButtonElement);
 
-		$('#startShareRenamer').click(function () {			
-			$linkTextMenu.toggleClass('hidden');
-			$('#linkRenamerButton').toggleClass('hidden');
-		});
-
-		$('#linkRenamerButton').click(function () {
-			$('#linkRenamerButton').hide();
-			$('#ShareRenamerNew').show();
-			$('#ShareRenamerSave').show();
-			$('#ShareRenamerCancel').show();
+		$('#startShareRenamer').click(function () {
+			//$linkTextMenu.removeClass('hidden');
+			$('#shareRenamerSpan').removeClass('hidden');
+			$shareRenamerMenuItem.removeClass('hidden');
+			$shareRenamerMenuItem2.removeClass('hidden');
+			$shareRenamerMenuItem3.removeClass('hidden');
+			$('#ShareRenamerNew').removeClass('hidden');
+			$('#ShareRenamerSave').removeClass('hidden');
+			$('#ShareRenamerCancel').removeClass('hidden');
 			$('#ShareRenamerNew').focus();
 		});
+
 		$('#ShareRenamerCancel').click(function () {
 			$('#ShareRenamerNew').val('');
 			$('#ShareRenamerSave').click();
+			//$linkTextMenu.addClass('hidden');
+			$shareRenamerMenuItem.addClass('hidden');
+			$shareRenamerMenuItem2.addClass('hidden');
+			$shareRenamerMenuItem3.addClass('hidden');
+			$('#shareRenamerSpan').addClass('hidden');
 		});
+
 		$('#ShareRenamerNew').keyup(function () {
 			var rx = /^[a-zA-Z0-9\-_]+$/g;
 			if ($(this).val() != '' && !rx.test($(this).val())) {
@@ -100,6 +104,7 @@ ShareRenamerFiles.hijackShare = function () {
 				$(this).tooltip('hide');
 			}
 		});
+
 		$('#ShareRenamerSave').click(function () {
 			$('#shareTabView input').attr('disabled', false);
 			var linktxt = $('.linkText').val();
@@ -133,10 +138,18 @@ ShareRenamerFiles.hijackShare = function () {
 					return false;
 				}
 			}
-			$('#linkRenamerButton').show();
-			$('#ShareRenamerNew').hide();
-			$('#ShareRenamerSave').hide();
-			$('#ShareRenamerCancel').hide();
+
+			$linkTextMenu.addClass('hidden');
+			$('#ShareRenamerNew').addClass('hidden');
+			$('#ShareRenamerSave').addClass('hidden');
+			$('#ShareRenamerCancel').addClass('hidden');
+
+			// Refresh clipboard button text
+			new Clipboard('.clipboardButton', {
+				text: function(trigger) {
+					return $linkText.val();
+				}
+			});
 		});
 
 		return r;
@@ -153,6 +166,5 @@ $(document).ready(function () {
 		if ($('#filesApp').val()) {
 			$('#fileList').one('updated', ShareRenamerFiles.hijackShare);
 		}
-
 	}
 );
