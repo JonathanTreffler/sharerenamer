@@ -3,6 +3,7 @@
 ## 1.4.0
 ### Changed
 - Link rename button title changed
+- Errors are shown as tooltip
 - New app icon
 - Prepared for release in the Nextcloud app store
 
