@@ -35,7 +35,6 @@ ShareRenamerFiles.hijackShare = function () {
 	OC.Share.ShareDialogLinkShareView.prototype.render = function () {
 		var r = ShareDialogLinkShareViewRender.apply(this, arguments);
 
-		var $shareRenamerMenuItem3 = this.$el.find('#shareRenamerMenuItem3');
 		var $linkTextMenu = this.$el.find('.linkTextMenu');
 		var $clipboardButtonMenuItem = this.$el.find('.clipboardButton').parent();
 		var $linkText = this.$el.find('.linkText');
@@ -59,8 +58,13 @@ ShareRenamerFiles.hijackShare = function () {
 		}
 
 		$linkRenamerButtonElement = 
+			'<li id="shareRenamerBaseUrlMenuItem class="hidden">' +
+				'<span class="menuitem">' +					
+				'<input id="ShareRenamerBaseUrl" class="hidden" type="text" value="" readonly autocomplete="off" spellcheck="false" autocorrect="off" />' +
+				'</span>' +
+			'</li>' +
 			'<li id="shareRenamerNewMenuItem class="hidden">' +
-				'<span id="shareRenamerSpan" class="hidden menuitem">' +					
+				'<span class="menuitem">' +					
 					'<input id="ShareRenamerNew" type="text" class="hidden" placeholder="' + token + '" autocomplete="off" spellcheck="false" autocorrect="off" />' +
 				'</span>' +
 			'</li>' +
@@ -74,11 +78,16 @@ ShareRenamerFiles.hijackShare = function () {
 					'<input id="ShareRenamerCancel" type="button" class="hidden button" value="' + t('core', 'Cancel') + '" />' +
 				'</span>' +
 			'</li>';
+
 		$linkTextMenu.after($linkRenamerButtonElement);
 
 		$('#startShareRenamer').click(function () {
-			//$linkTextMenu.removeClass('hidden');
-			$('#shareRenamerSpan').removeClass('hidden');
+			var url = $linkText.val();
+			var idx = url.lastIndexOf("/");
+			var baseUrl = url.substr(0, idx + 1);
+			$('#ShareRenamerBaseUrl').val(baseUrl);
+			$('#shareRenamerBaseUrlMenuItem').removeClass('hidden');
+			$('#ShareRenamerBaseUrl').removeClass('hidden');
 			$('#shareRenamerNewMenuItem').removeClass('hidden');
 			$('#shareRenamerSaveMenuItem').removeClass('hidden');
 			$('#shareRenamerCancelMenuItem').removeClass('hidden');
@@ -94,7 +103,8 @@ ShareRenamerFiles.hijackShare = function () {
 			$('#shareRenamerNewMenuItem').addClass('hidden');
 			$('#shareRenamerSaveMenuItem').addClass('hidden');
 			$('#shareRenamerCancelMenuItem').addClass('hidden');
-			$('#shareRenamerSpan').addClass('hidden');
+			$('#ShareRenamerBaseUrl').add('hidden');
+			$('#shareRenamerBaseUrlMenuItem').addClass('hidden');
 		});
 
 		$('#ShareRenamerNew').keyup(function () {
