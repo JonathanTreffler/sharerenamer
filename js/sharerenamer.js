@@ -48,15 +48,6 @@ ShareRenamerFiles.hijackShare = function () {
 		'</li>';
 		$clipboardButtonMenuItem.after($shareRenamerButtonMenuItem);
 
-		var linktxt = $linkText.val();
-		if (linktxt == "" || linktxt == null || linktxt == false || typeof(linktxt) == 'undefined') {
-			var token = '???';
-		} 
-		else {
-			var n = linktxt.lastIndexOf("/");
-			var token = linktxt.substr(n + 1);
-		}
-
 		$linkRenamerButtonElement = 
 			'<li id="shareRenamerBaseUrlMenuItem class="hidden">' +
 				'<span class="menuitem">' +					
@@ -65,7 +56,7 @@ ShareRenamerFiles.hijackShare = function () {
 			'</li>' +
 			'<li id="shareRenamerNewMenuItem class="hidden">' +
 				'<span class="menuitem">' +					
-					'<input id="ShareRenamerNew" type="text" class="hidden" placeholder="' + token + '" autocomplete="off" spellcheck="false" autocorrect="off" />' +
+					'<input id="ShareRenamerNew" type="text" class="hidden" placeholder="" autocomplete="off" spellcheck="false" autocorrect="off" />' +
 				'</span>' +
 			'</li>' +
 			'<li id="shareRenamerSaveMenuItem">' +
@@ -85,7 +76,12 @@ ShareRenamerFiles.hijackShare = function () {
 			var url = $linkText.val();
 			var idx = url.lastIndexOf("/");
 			var baseUrl = url.substr(0, idx + 1);
+
+			var idx2 = url.lastIndexOf("/");
+			var token = url.substr(idx2 + 1);
+
 			$('#ShareRenamerBaseUrl').val(baseUrl);
+			$('#ShareRenamerNew').attr('placeholder', token);
 			$('#shareRenamerBaseUrlMenuItem').removeClass('hidden');
 			$('#ShareRenamerBaseUrl').removeClass('hidden');
 			$('#shareRenamerNewMenuItem').removeClass('hidden');
@@ -108,6 +104,11 @@ ShareRenamerFiles.hijackShare = function () {
 		});
 
 		$('#ShareRenamerNew').keyup(function () {
+			if (event.keyCode === 13) {
+				$('#ShareRenamerSave').click();
+				return;
+			}
+			
 			var rx = /^[a-zA-Z0-9\-_]+$/g;
 			if ($(this).val() != '' && !rx.test($(this).val())) {
 				$(this).tooltip({
@@ -175,6 +176,7 @@ ShareRenamerFiles.hijackShare = function () {
 			$('#ShareRenamerNew').addClass('hidden');
 			$('#ShareRenamerSave').addClass('hidden');
 			$('#ShareRenamerCancel').addClass('hidden');
+			$('#ShareRenamerBaseUrl').addClass('hidden');
 
 			// Refresh clipboard button text
 			new Clipboard('.clipboardButton', {
