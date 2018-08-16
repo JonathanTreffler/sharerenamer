@@ -42,7 +42,8 @@ ShareRenamerFiles.hijackShare = function () {
 			var linktxt = $linkText.val();
 			if (linktxt == "" || linktxt == null || linktxt == false || typeof(linktxt) == 'undefined') {
 				var token = '???';
-			} else {
+			} 
+			else {
 				var n = linktxt.lastIndexOf("/");
 				var token = linktxt.substr(n + 1);
 			}
@@ -60,7 +61,8 @@ ShareRenamerFiles.hijackShare = function () {
 
 		if ($checkBox.is(':checked')) {
 			$('#ShareRenamerDiv').show();
-		} else {
+		} 
+		else {
 			$('#ShareRenamerDiv').hide();
 		}
 
@@ -71,15 +73,17 @@ ShareRenamerFiles.hijackShare = function () {
 			$('#ShareRenamerCancel').show();
 			$('#ShareRenamerNew').focus();
 		});
+
 		$('#ShareRenamerCancel').click(function () {
 			$('#ShareRenamerNew').val('');
 			$('#ShareRenamerSave').click();
 		});
+
 		$('#ShareRenamerNew').keyup(function () {
 			var rx = /^[a-zA-Z0-9\-_]+$/g;
 			if ($(this).val() != '' && !rx.test($(this).val())) {
 				$(this).tooltip({
-					placement: 'bottom',
+					placement: 'right',
 					trigger: 'manual',
 					title: t('core', 'Only %s is available.').replace('%s', ' a-z, A-Z, 0-9, -, _ ')
 				});
@@ -98,13 +102,13 @@ ShareRenamerFiles.hijackShare = function () {
 
 			if (new_token == old_token) {
 				$('#ShareRenamerNew').val('');
-
-			} else if (new_token != '' && !rx.test(new_token)) {
+			}
+			else if (new_token != '' && !rx.test(new_token)) {
 				// tooltip is shown, so just don't do anything
 				$('#ShareRenamerNew').select();
 				return false;
-
-			} else if (new_token != '') {
+			}
+			else if (new_token != '') {
 				var init = new ShareRenamer(OC.generateUrl('/apps/sharerenamer/rename'));
 				var exec = init.Rename(old_token, new_token);
 
@@ -112,15 +116,28 @@ ShareRenamerFiles.hijackShare = function () {
 					$linkText.val($linkText.val().replace(old_token, new_token));
 					$('#ShareRenamerNew').attr('placeholder', new_token);
 					$('#ShareRenamerNew').val('');
-				} else if (exec == 'exists') {
-					OC.Notification.showHtml(t('files', 'Link {newname} already exists.<br>Please choose another link name').replace('{newname}', "'" + new_token + "'") + '.');
+				} 
+				else if (exec == 'exists') {
+					$('#ShareRenamerNew').tooltip({
+						placement: 'right',
+						trigger: 'manual',
+						title: t('files', 'Link {newname} already exists.Please choose another link name.').replace('{newname}', "'" + new_token + "'")
+					});
+					_.delay(function() {
+						$('#ShareRenamerNew').tooltip('hide');
+						$('#ShareRenamerNew').tooltip('destroy');
+					}, 3000);
+
+					$('#ShareRenamerNew').tooltip('show');
 					$('#ShareRenamerNew').select();
 					return false;
-				} else if (exec == 'error') {
+				} 
+				else if (exec == 'error') {
 					// alert is in AJAX call already
 					return false;
 				}
 			}
+
 			$('#linkRenamerButton').show();
 			$('#ShareRenamerNew').hide();
 			$('#ShareRenamerSave').hide();
@@ -131,9 +148,7 @@ ShareRenamerFiles.hijackShare = function () {
 	};
 };
 
-
 $(document).ready(function () {
-
 		if ($('#body-login').length > 0) {
 			return true; //deactivate on login page
 		}
@@ -141,6 +156,5 @@ $(document).ready(function () {
 		if ($('#filesApp').val()) {
 			$('#fileList').one('updated', ShareRenamerFiles.hijackShare);
 		}
-
 	}
 );
