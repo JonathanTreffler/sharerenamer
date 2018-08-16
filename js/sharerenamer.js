@@ -21,7 +21,7 @@ ShareRenamer.prototype = {
 		});
 
 		request.fail(function( jqXHR, textStatus ) {
-			OC.Notification.show(t('core', 'Error') + ': ' + textStatus);
+			OC.Notification.show(t('core', 'Error') + ': ' + textStatus, { type: 'error' });
 		});
 		
 		return result;
@@ -35,9 +35,6 @@ ShareRenamerFiles.hijackShare = function () {
 	OC.Share.ShareDialogLinkShareView.prototype.render = function () {
 		var r = ShareDialogLinkShareViewRender.apply(this, arguments);
 
-		//var $startShareRenamer = this.$el.find('#startShareRenamer');
-		var $shareRenamerMenuItem = this.$el.find('#shareRenamerMenuItem');
-		var $shareRenamerMenuItem2 = this.$el.find('#shareRenamerMenuItem2');
 		var $shareRenamerMenuItem3 = this.$el.find('#shareRenamerMenuItem3');
 		var $linkTextMenu = this.$el.find('.linkTextMenu');
 		var $clipboardButtonMenuItem = this.$el.find('.clipboardButton').parent();
@@ -55,26 +52,36 @@ ShareRenamerFiles.hijackShare = function () {
 		var linktxt = $linkText.val();
 		if (linktxt == "" || linktxt == null || linktxt == false || typeof(linktxt) == 'undefined') {
 			var token = '???';
-		} else {
+		} 
+		else {
 			var n = linktxt.lastIndexOf("/");
 			var token = linktxt.substr(n + 1);
 		}
+
 		$linkRenamerButtonElement = 
-			'<li id="shareRenamerMenuItem class="hidden">' +
-			'<span id="shareRenamerSpan" class="hidden menuitem">' +					
-				'<input id="ShareRenamerNew" type="text" class="hidden" placeholder="' + token + '" autocomplete="off" spellcheck="false" autocorrect="off" />' +
-				'</span></li><li id="shareRenamerMenuItem2"><span class="menuitem">' +
-				'<input id="ShareRenamerSave" type="button" class="hidden button" value="' + t('core', 'Rename') + '" />' +
-				'</span></li><li id="shareRenamerMenuItem3"><span class="menuitem"><input id="ShareRenamerCancel" type="button" class="hidden button" value="' + t('core', 'Cancel') + '" />' +
-			'</span></li>';
+			'<li id="shareRenamerNewMenuItem class="hidden">' +
+				'<span id="shareRenamerSpan" class="hidden menuitem">' +					
+					'<input id="ShareRenamerNew" type="text" class="hidden" placeholder="' + token + '" autocomplete="off" spellcheck="false" autocorrect="off" />' +
+				'</span>' +
+			'</li>' +
+			'<li id="shareRenamerSaveMenuItem">' +
+				'<span class="menuitem">' +
+					'<input id="ShareRenamerSave" type="button" class="hidden button" value="' + t('core', 'Rename') + '" />' +
+				'</span>' +
+			'</li>' +
+			'<li id="shareRenamerCancelMenuItem">' +
+				'<span class="menuitem">' +
+					'<input id="ShareRenamerCancel" type="button" class="hidden button" value="' + t('core', 'Cancel') + '" />' +
+				'</span>' +
+			'</li>';
 		$linkTextMenu.after($linkRenamerButtonElement);
 
 		$('#startShareRenamer').click(function () {
 			//$linkTextMenu.removeClass('hidden');
 			$('#shareRenamerSpan').removeClass('hidden');
-			$shareRenamerMenuItem.removeClass('hidden');
-			$shareRenamerMenuItem2.removeClass('hidden');
-			$shareRenamerMenuItem3.removeClass('hidden');
+			$('#shareRenamerNewMenuItem').removeClass('hidden');
+			$('#shareRenamerSaveMenuItem').removeClass('hidden');
+			$('#shareRenamerCancelMenuItem').removeClass('hidden');
 			$('#ShareRenamerNew').removeClass('hidden');
 			$('#ShareRenamerSave').removeClass('hidden');
 			$('#ShareRenamerCancel').removeClass('hidden');
@@ -84,10 +91,9 @@ ShareRenamerFiles.hijackShare = function () {
 		$('#ShareRenamerCancel').click(function () {
 			$('#ShareRenamerNew').val('');
 			$('#ShareRenamerSave').click();
-			//$linkTextMenu.addClass('hidden');
-			$shareRenamerMenuItem.addClass('hidden');
-			$shareRenamerMenuItem2.addClass('hidden');
-			$shareRenamerMenuItem3.addClass('hidden');
+			$('#shareRenamerNewMenuItem').addClass('hidden');
+			$('#shareRenamerSaveMenuItem').addClass('hidden');
+			$('#shareRenamerCancelMenuItem').addClass('hidden');
 			$('#shareRenamerSpan').addClass('hidden');
 		});
 
@@ -95,12 +101,13 @@ ShareRenamerFiles.hijackShare = function () {
 			var rx = /^[a-zA-Z0-9\-_]+$/g;
 			if ($(this).val() != '' && !rx.test($(this).val())) {
 				$(this).tooltip({
-					placement: 'bottom',
+					placement: 'top',
 					trigger: 'manual',
 					title: t('core', 'Only %s is available.').replace('%s', ' a-z, A-Z, 0-9, -, _ ')
 				});
 				$(this).tooltip('show');
-			} else {
+			} 
+			else {
 				$(this).tooltip('hide');
 			}
 		});
@@ -116,12 +123,14 @@ ShareRenamerFiles.hijackShare = function () {
 			if (new_token == old_token) {
 				$('#ShareRenamerNew').val('');
 
-			} else if (new_token != '' && !rx.test(new_token)) {
+			} 
+			else if (new_token != '' && !rx.test(new_token)) {
 				// tooltip is shown, so just don't do anything
 				$('#ShareRenamerNew').select();
 				return false;
 
-			} else if (new_token != '') {
+			} 
+			else if (new_token != '') {
 				var init = new ShareRenamer(OC.generateUrl('/apps/sharerenamer/rename'));
 				var exec = init.Rename(old_token, new_token);
 
@@ -129,11 +138,24 @@ ShareRenamerFiles.hijackShare = function () {
 					$linkText.val($linkText.val().replace(old_token, new_token));
 					$('#ShareRenamerNew').attr('placeholder', new_token);
 					$('#ShareRenamerNew').val('');
-				} else if (exec == 'exists') {
-					OC.Notification.showHtml(t('files', 'Link {newname} already exists.<br>Please choose another link name.').replace('{newname}', "'" + new_token + "'") + '.');
+				} 
+				else if (exec == 'exists') {
+					$('#ShareRenamerNew').tooltip({
+						placement: 'top',
+						trigger: 'manual',
+						title: t('files', 'Link {newname} already exists. Please choose another link name.').replace('{newname}', "'" + new_token + "'")
+					});
+					_.delay(function() {
+						$('#ShareRenamerNew').tooltip('hide');
+						$('#ShareRenamerNew').tooltip('destroy');
+					}, 3000);
+					
+					$('#ShareRenamerNew').tooltip('show');
+
 					$('#ShareRenamerNew').select();
 					return false;
-				} else if (exec == 'error') {
+				} 
+				else if (exec == 'error') {
 					// alert is in AJAX call already
 					return false;
 				}
@@ -156,9 +178,7 @@ ShareRenamerFiles.hijackShare = function () {
 	};
 };
 
-
 $(document).ready(function () {
-
 		if ($('#body-login').length > 0) {
 			return true; //deactivate on login page
 		}
