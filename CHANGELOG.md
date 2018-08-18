@@ -2,7 +2,7 @@
 
 ## 2.0.0
 ### Added
-- When editing a link, the renaming can be performed by hitting Enter.
+- When editing a link, the renaming can be performed with Enter. The operation can be cancelled with ESC.
 
 ### Changed
 - Nextcloud 14 compatibility.

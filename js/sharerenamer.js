@@ -78,8 +78,9 @@ ShareRenamerFiles.hijackShare = function () {
 			var baseUrl = url.substr(0, idx + 1);
 
 			var idx2 = url.lastIndexOf("/");
-			var token = url.substr(idx2 + 1);
+			var token = url.substr(idx2 + 1);		
 
+			$('#ShareRenamerNew').val('');
 			$('#ShareRenamerBaseUrl').val(baseUrl);
 			$('#ShareRenamerNew').attr('placeholder', token);
 			$('#shareRenamerBaseUrlMenuItem').removeClass('hidden');
@@ -103,13 +104,16 @@ ShareRenamerFiles.hijackShare = function () {
 			$('#shareRenamerBaseUrlMenuItem').addClass('hidden');
 		});
 
-		$('#ShareRenamerNew').keyup(function () {
-			if (event.keyCode === 13) {
-				$('#ShareRenamerSave').click();
+		$('#ShareRenamerNew').keyup(function (event) {
+			if (event.keyCode === 27) {
+				$(this).tooltip('hide');
+				$(this).tooltip('destroy');
+				$('#ShareRenamerCancel').click();
 				return;
 			}
-			
+
 			var rx = /^[a-zA-Z0-9\-_]+$/g;
+
 			if ($(this).val() != '' && !rx.test($(this).val())) {
 				$(this).tooltip({
 					placement: 'top',
@@ -120,6 +124,12 @@ ShareRenamerFiles.hijackShare = function () {
 			} 
 			else {
 				$(this).tooltip('hide');
+				$(this).tooltip('destroy');
+
+				if (event.keyCode === 13) {
+					$('#ShareRenamerSave').click();
+					return;
+				}
 			}
 		});
 
