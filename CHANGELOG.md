@@ -3,6 +3,7 @@
 ## 2.0.0
 ### Added
 - When editing a link, the renaming can be performed with Enter. The operation can be cancelled with ESC.
+- Localization support.
 
 ### Changed
 - Nextcloud 14 compatibility.

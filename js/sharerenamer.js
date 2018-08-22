@@ -21,7 +21,7 @@ ShareRenamer.prototype = {
 		});
 
 		request.fail(function( jqXHR, textStatus ) {
-			OC.Notification.show(t('core', 'Error') + ': ' + textStatus, { type: 'error' });
+			OC.Notification.show(t('sharerenamer', 'Error') + ': ' + textStatus, { type: 'error' });
 		});
 		
 		return result;
@@ -43,7 +43,7 @@ ShareRenamerFiles.hijackShare = function () {
 		'<li>' +
 			'<a href="#" id="startShareRenamer" class="menuitem">' +
 				'<span class="icon icon-edit"></span>' + 
-				'<span>' + t('core', 'Link') + ' ' + t('core', 'Rename').toLowerCase() + '</span>' + 
+				'<span>' + t('sharerenamer', 'Rename link') + '</span>' + 
 			'</a>' +
 		'</li>';
 		$clipboardButtonMenuItem.after($shareRenamerButtonMenuItem);
@@ -61,12 +61,12 @@ ShareRenamerFiles.hijackShare = function () {
 			'</li>' +
 			'<li id="shareRenamerSaveMenuItem">' +
 				'<span class="menuitem">' +
-					'<input id="ShareRenamerSave" type="button" class="hidden button" value="' + t('core', 'Rename') + '" />' +
+					'<input id="ShareRenamerSave" type="button" class="hidden button" value="' + t('sharerenamer', 'Rename') + '" />' +
 				'</span>' +
 			'</li>' +
 			'<li id="shareRenamerCancelMenuItem">' +
 				'<span class="menuitem">' +
-					'<input id="ShareRenamerCancel" type="button" class="hidden button" value="' + t('core', 'Cancel') + '" />' +
+					'<input id="ShareRenamerCancel" type="button" class="hidden button" value="' + t('sharerenamer', 'Cancel') + '" />' +
 				'</span>' +
 			'</li>';
 
@@ -118,7 +118,7 @@ ShareRenamerFiles.hijackShare = function () {
 				$(this).tooltip({
 					placement: 'top',
 					trigger: 'manual',
-					title: t('core', 'Only %s is available.').replace('%s', ' a-z, A-Z, 0-9, -, _ ')
+					title: t('sharerenamer', 'Only the following characters are allowed for links: %s').replace('%s', 'a-z, A-Z, 0-9, -, _')
 				});
 				$(this).tooltip('show');
 			} 
