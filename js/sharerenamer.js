@@ -51,7 +51,7 @@ ShareRenamerFiles.hijackShare = function () {
 				'<br>' +
 				'<div id="ShareRenamerDiv">' +
 					'<input id="linkRenamerButton" type="button" class="button" value="' + t('core', 'Link') + ' ' + t('core', 'Rename').toLowerCase() + '" />' +
-					'<input id="ShareRenamerNew" type="text" class="hidden" placeholder="' + token + '" autocomplete="off" spellcheck="false" autocorrect="off" />' +
+					'<input id="ShareRenamerNew" type="text" class="hidden" placeholder="" autocomplete="off" spellcheck="false" autocorrect="off" />' +
 					'<br>' +
 					'<input id="ShareRenamerSave" type="button" class="button hidden" value="' + t('core', 'Rename') + '" />' +
 					'<input id="ShareRenamerCancel" type="button" class="button hidden" value="' + t('core', 'Cancel') + '" />' +
@@ -66,8 +66,18 @@ ShareRenamerFiles.hijackShare = function () {
 			$('#ShareRenamerDiv').hide();
 		}
 
-		$('#linkRenamerButton').click(function () {
+		$('#linkRenamerButton').click(function () {			
 			$('#linkRenamerButton').hide();
+
+			var url = $linkText.val();
+			var idx = url.lastIndexOf("/");
+			var baseUrl = url.substr(0, idx + 1);
+
+			var idx2 = url.lastIndexOf("/");
+			var token = url.substr(idx2 + 1);		
+
+			$('#ShareRenamerNew').val('');
+			$('#ShareRenamerNew').attr('placeholder', token);
 			$('#ShareRenamerNew').show();
 			$('#ShareRenamerSave').show();
 			$('#ShareRenamerCancel').show();
@@ -79,7 +89,14 @@ ShareRenamerFiles.hijackShare = function () {
 			$('#ShareRenamerSave').click();
 		});
 
-		$('#ShareRenamerNew').keyup(function () {
+		$('#ShareRenamerNew').keyup(function (event) {
+			if (event.keyCode === 27) {
+				$(this).tooltip('hide');
+				$(this).tooltip('destroy');
+				$('#ShareRenamerCancel').click();
+				return;
+			}
+
 			var rx = /^[a-zA-Z0-9\-_]+$/g;
 			if ($(this).val() != '' && !rx.test($(this).val())) {
 				$(this).tooltip({
@@ -90,6 +107,12 @@ ShareRenamerFiles.hijackShare = function () {
 				$(this).tooltip('show');
 			} else {
 				$(this).tooltip('hide');
+				$(this).tooltip('destroy');
+
+				if (event.keyCode === 13) {
+					$('#ShareRenamerSave').click();
+					return;
+				}
 			}
 		});
 		$('#ShareRenamerSave').click(function () {
