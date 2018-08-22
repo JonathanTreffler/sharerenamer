@@ -85,7 +85,7 @@ ShareRenamerFiles.hijackShare = function () {
 				$(this).tooltip({
 					placement: 'right',
 					trigger: 'manual',
-					title: t('core', 'Only %s is available.').replace('%s', ' a-z, A-Z, 0-9, -, _ ')
+					title: t('core', 'Only the following characters are allowed for links: %s').replace('%s', ' a-z, A-Z, 0-9, -, _ ')
 				});
 				$(this).tooltip('show');
 			} else {
