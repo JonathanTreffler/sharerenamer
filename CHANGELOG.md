@@ -1,6 +1,9 @@
 # Changelog
 
 ## 1.4.0
+### Added
+- Localization support.
+
 ### Changed
 - Link rename button title changed.
 - Errors are shown as tooltip.
