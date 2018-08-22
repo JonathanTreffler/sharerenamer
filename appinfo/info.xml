@@ -4,7 +4,7 @@
 	<id>sharerenamer</id>
 	<name>ShareRenamer</name>
 	<summary>A simple and fast share link renamer add-in for the Files app</summary>
-	<description>This is an add-in to the Files app, which allows you to customize your share tokens, so your links can be https://cloud.de/s/mysharedlink instead of https://cloud.de/s/qPv1SwbU5M2YEoJZ. Just share a file or folder (or click an already shared one) and a new button will appear below the share link URL in the sidebar of the Files app.
+	<description>This is an add-in to the Files app, which allows you to customize your share tokens, so your links can be https://mycloud.de/s/mysharedlink instead of https://mycloud.de/s/qPv1SwbU5M2YEoJZ. Just share a file or folder (or click an already shared one) and a new button will appear below the 'Copy URL' button in the menu of the share.
 	</description>
 	<licence>AGPL</licence>
 	<author>Fallon Turner</author>
