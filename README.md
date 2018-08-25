@@ -9,6 +9,9 @@ This is an add-in to the Files app, which allows you to customize your share tok
 * Nextcloud >= 9
 
 ## Install
+### Nextcloud app store
+Just install the app from the Nextcloud app store. It can be found under the 'tools' category.
+
 ### Manual installation
 * Download the latest version from the [release page](https://github.com/DecaTec/sharerenamer/releases).
 * Extract the archive to your Nextcloud's app folder, e.g. `tar xvf sharerenamer-x.x.x.tar.gz -C /path/to/nextcloud/apps`
