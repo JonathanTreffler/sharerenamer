@@ -21,7 +21,7 @@ ShareRenamer.prototype = {
 		});
 
 		request.fail(function( jqXHR, textStatus ) {
-			OC.Notification.show(t('core', 'Error') + ': ' + textStatus);
+			OC.Notification.show(t('sharerenamer', 'Error') + ': ' + textStatus);
 		});
 		
 		return result;
@@ -50,11 +50,11 @@ ShareRenamerFiles.hijackShare = function () {
 			$linkRenamerButtonElement = 
 				'<br>' +
 				'<div id="ShareRenamerDiv">' +
-					'<input id="linkRenamerButton" type="button" class="button" value="' + t('core', 'Link') + ' ' + t('core', 'Rename').toLowerCase() + '" />' +
+					'<input id="linkRenamerButton" type="button" class="button" value="' + t('sharerenamer', 'Rename link') + '" />' +
 					'<input id="ShareRenamerNew" type="text" class="hidden" placeholder="" autocomplete="off" spellcheck="false" autocorrect="off" />' +
 					'<br>' +
-					'<input id="ShareRenamerSave" type="button" class="button hidden" value="' + t('core', 'Rename') + '" />' +
-					'<input id="ShareRenamerCancel" type="button" class="button hidden" value="' + t('core', 'Cancel') + '" />' +
+					'<input id="ShareRenamerSave" type="button" class="button hidden" value="' + t('sharerenamer', 'Rename') + '" />' +
+					'<input id="ShareRenamerCancel" type="button" class="button hidden" value="' + t('sharerenamer', 'Cancel') + '" />' +
 				'</div><br>';
 			$linkText.after($linkRenamerButtonElement);
 		}
@@ -102,7 +102,7 @@ ShareRenamerFiles.hijackShare = function () {
 				$(this).tooltip({
 					placement: 'right',
 					trigger: 'manual',
-					title: t('core', 'Only the following characters are allowed for links: %s').replace('%s', ' a-z, A-Z, 0-9, -, _ ')
+					title: t('sharerenamer', 'Only the following characters are allowed for links: %s').replace('%s', ' a-z, A-Z, 0-9, -, _ ')
 				});
 				$(this).tooltip('show');
 			} else {
