@@ -12,7 +12,7 @@
 	<author homepage="https://decatec.de">DecaTec</author>
 	<version>1.4.0</version>
 	<namespace>ShareRenamer</namespace>
-	<category>Tool</category>
+	<category>tools</category>
 	<website>https://github.com/DecaTec/sharerenamer</website>
 	<bugs>https://github.com/DecaTec/sharerenamer/issues</bugs>
 	<repository>https://github.com/DecaTec/sharerenamer.git</repository>
