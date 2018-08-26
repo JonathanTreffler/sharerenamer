@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.4.1
+### Added
+- Translations
+
+### Changed
+- Required Nextcloud version
+
 ## 1.4.0
 ### Added
 - Localization support.
