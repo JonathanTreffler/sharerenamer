@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.0.1
+### Changed
+- Required Nextcloud version changed from 14.0 to 14
+
+### Added
+- Translations
+
 ## 2.0.0
 ### Changed
 - Nextcloud 14 compatibility.
