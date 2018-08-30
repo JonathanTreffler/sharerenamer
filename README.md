@@ -3,14 +3,16 @@
 
 ![](screenshots/sharerenamer.png)
 
-This is an add-in to the Files app, which allows you to customize your share tokens, so your links can be https://mycloud.de/s/mysharedlink instead of https://mycloud.de/s/qPv1SwbU5M2YEoJZ. Just share a file or folder (or click an already shared one) and a new button for renaming the link will appear below the share link URL in the sidebar of the Files app.
+This is an add-in to the Files app, which allows you to customize your share tokens, so your links can be https://mycloud.de/s/mysharedlink instead of https://mycloud.de/s/qPv1SwbU5M2YEoJZ. Just share a file or folder (or click an already shared one) and a new button for renaming the link will appear below the share link URL in the sidebar of the Files app. 
+
+You can also rename links in the Gallery app.
 
 ## Requirements
 * Nextcloud >= 9
 
 ## Install
 ### Nextcloud app store
-Just install the app from the Nextcloud app store. It can be found under the 'tools' category.
+Just install the app from the [Nextcloud app store](https://apps.nextcloud.com/apps/sharerenamer). It can be found under the 'tools' category.
 
 ### Manual installation
 * Download the latest version from the [release page](https://github.com/DecaTec/sharerenamer/releases).
