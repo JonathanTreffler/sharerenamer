@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.0
+### Added
+- Shared links can be renamed in the Gallery app.
+
 ## 2.0.1
 ### Changed
 - Required Nextcloud version changed from 14.0 to 14
@@ -11,6 +15,11 @@
 ### Changed
 - Nextcloud 14 compatibility.
 - Changed workflow of renaming a link.
+
+
+## 1.5.0
+### Added
+- Shared links can be renamed in the Gallery app.
 
 ## 1.4.0
 ### Added

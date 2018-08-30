@@ -10,7 +10,7 @@ This is an add-in to the Files app, which allows you to customize your share tok
 
 ## Install
 ### Nextcloud app store
-Just install the app from the Nextcloud app store. It can be found under the 'tools' category.
+Just install the app from the [Nextcloud app store](https://apps.nextcloud.com/apps/sharerenamer). It can be found under the 'tools' category.
 
 ### Manual installation
 * Download the latest version from the [release page](https://github.com/DecaTec/sharerenamer/releases).
