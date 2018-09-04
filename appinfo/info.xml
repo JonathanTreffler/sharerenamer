@@ -12,6 +12,7 @@ You can also rename links in the Gallery app.]]></description>
 	<author homepage="https://github.com/LazyShpee">LazyShpee</author>
 	<author homepage="https://decatec.de">DecaTec</author>
 	<version>1.5.0</version>
+	<screenshot>https://raw.githubusercontent.com/DecaTec/sharerenamer/Nextcloud-13/screenshots/sharerenamer.png</screenshot>
 	<namespace>ShareRenamer</namespace>
 	<category>tools</category>
 	<website>https://github.com/DecaTec/sharerenamer</website>
