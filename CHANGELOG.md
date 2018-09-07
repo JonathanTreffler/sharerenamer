@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.1
+### Added
+- New translations.
+
 ## 2.1.0
 ### Added
 - Shared links can be renamed in the Gallery app.
