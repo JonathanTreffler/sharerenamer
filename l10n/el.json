@@ -1,0 +1,7 @@
+{ "translations": {
+    "Error" : "Σφάλμα",
+    "Rename link" : "Μετονομασία συνδέσμου",
+    "Rename" : "Μετονομασία",
+    "Cancel" : "Άκυρο"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}
