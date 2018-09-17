@@ -7,6 +7,7 @@ OC.L10N.register(
     "Cancel" : "Annuleren",
     "Only the following characters are allowed for links: %s" : "Alleen de volgende tekens zijn toegestaan voor links: %s",
     "Link {newname} already exists. Please choose another link name." : "Link {newname} bestaat al. Kies een andere link.",
-    "ShareRenamer" : "ShareRenamer"
+    "ShareRenamer" : "ShareRenamer",
+    "A simple share link renamer add-in for the Files app" : "Een eenvioudige deellink hernoemer voor de Bestanden app"
 },
 "nplurals=2; plural=(n != 1);");
