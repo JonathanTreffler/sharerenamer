@@ -106,6 +106,7 @@ ShareRenamerFiles.hijackShare = function () {
 		$('#ShareRenamerSave').click(function () {
 			$('#shareTabView input').attr('disabled', false);
 			var linktxt = $('.linkText').val();
+			var oldLinkTxt = linktxt;
 			var n = linktxt.lastIndexOf("/");
 			var old_token = linktxt.substr(n + 1);
 			var new_token = $('#ShareRenamerNew').val();
@@ -163,6 +164,18 @@ ShareRenamerFiles.hijackShare = function () {
 				text: function(trigger) {
 					return $linkText.val();
 				}
+			});
+
+			// Refresh social share links
+			OC.Share.Social.Collection.each(function(model) {
+				var url = model.get('url');
+				newUrl = url.replace('{{reference}}', $linkText.val());
+				var oldUrl = url.replace('{{reference}}', oldLinkTxt);
+
+				$('.shareOption').each(function() {
+					if($(this).attr('data-url') == oldUrl)
+						$(this).attr('data-url', newUrl);
+				})
 			});
 		});
 

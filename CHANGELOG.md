@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.2.0
+### Fixed
+- After renaming a link, the social sharing links were not updated.
+
+## Added
+- Translations
+
 ## 2.1.1
 ### Added
 - New translations.
@@ -10,7 +17,7 @@
 
 ## 2.0.1
 ### Changed
-- Required Nextcloud version changed from 14.0 to 14
+- Required Nextcloud version changed from 14.0 to 14.
 
 ### Added
 - Translations
