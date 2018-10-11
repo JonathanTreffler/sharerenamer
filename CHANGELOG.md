@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.6.0
+### Fixed
+- After renaming a link, the social sharing links were not updated.
+
+## Added
+- Translations
+
 ## 1.5.1
 ### Added
 - New translations.
