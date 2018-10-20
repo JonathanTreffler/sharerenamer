@@ -1,0 +1,7 @@
+{ "translations": {
+    "Error" : "Hiba",
+    "Rename link" : "Hivatkozás átnevezése",
+    "Rename" : "Átnevezés",
+    "Cancel" : "Mégsem"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}
