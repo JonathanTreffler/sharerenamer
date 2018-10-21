@@ -8,15 +8,16 @@
 
 You can also rename links in the Gallery app.]]></description>
 	<licence>AGPL</licence>
+	<author homepage="https://decatec.de">DecaTec</author>
 	<author>Fallon Turner</author>
 	<author homepage="https://github.com/LazyShpee">LazyShpee</author>
-	<author homepage="https://decatec.de">DecaTec</author>
 	<version>1.6.0</version>
 	<namespace>ShareRenamer</namespace>
 	<category>tools</category>
 	<website>https://github.com/DecaTec/sharerenamer</website>
+	<discussion>https://help.nextcloud.com/c/apps/sharerenamer</discussion>
 	<bugs>https://github.com/DecaTec/sharerenamer/issues</bugs>
-	<repository>https://github.com/DecaTec/sharerenamer.git</repository>
+	<repository>https://github.com/DecaTec/sharerenamer</repository>
 	<screenshot>https://raw.githubusercontent.com/DecaTec/sharerenamer/Nextcloud-13/screenshots/sharerenamer.png</screenshot>
 	<dependencies>
 		<nextcloud min-version="9" max-version="13"/>
