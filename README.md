@@ -1,4 +1,5 @@
 ![Github All Releases](https://img.shields.io/github/downloads/DecaTec/sharerenamer/total.svg)
+[![AGPL-3.0](https://img.shields.io/github/license/DecaTec/sharerenamer.svg)](https://github.com/DecaTec/sharerenamer/blob/master/LICENSE)
 
 # ShareRenamer
 ## A simple share link renamer add-in for the Files app in Nextcloud
