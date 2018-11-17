@@ -1,5 +1,13 @@
 # Changelog
 
+# 1.7.0
+## Fixed
+- Tool tips are closed when renaming is cancelled.
+- Correct translation on tool tip when link name is already used.
+
+### Added
+- Translations.
+
 ## 1.6.0
 ### Fixed
 - After renaming a link, the social sharing links were not updated.

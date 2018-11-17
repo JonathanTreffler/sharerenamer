@@ -55,6 +55,8 @@ ShareRenamerFiles.hijackShare = function () {
 		});
 
 		$('#ShareRenamerCancel').click(function () {
+			$('#ShareRenamerNew').tooltip('hide');
+			$('#ShareRenamerNew').tooltip('destroy');
 			$('#ShareRenamerNew').val('');
 			$('#ShareRenamerSave').click();
 		});
@@ -116,7 +118,7 @@ ShareRenamerFiles.hijackShare = function () {
 					$('#ShareRenamerNew').tooltip({
 						placement: 'right',
 						trigger: 'manual',
-						title: t('files', 'Link {newname} already exists. Please choose another link name.').replace('{newname}', "'" + new_token + "'")
+						title: t('sharerenamer', 'Link {newname} already exists. Please choose another link name.').replace('{newname}', "'" + new_token + "'")
 					});
 					_.delay(function() {
 						$('#ShareRenamerNew').tooltip('hide');
