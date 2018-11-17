@@ -2,11 +2,12 @@
 
 ShareRenamerFiles.hijackShare = function () {
 	var ShareDialogLinkShareViewRender = OC.Share.ShareDialogLinkShareView.prototype.render;
+
 	OC.Share.ShareDialogLinkShareView.prototype.render = function () {
 		var r = ShareDialogLinkShareViewRender.apply(this, arguments);
 
 		var $linkTextMenu = this.$el.find('.linkTextMenu');
-		var $clipboardButtonMenuItem = this.$el.find('.clipboardButton').parent();
+		var $linkTextMenuParent = $linkTextMenu.parent();
 		var $linkText = this.$el.find('.linkText');
 
 		$shareRenamerButtonMenuItem = 
@@ -15,32 +16,29 @@ ShareRenamerFiles.hijackShare = function () {
 				'<span class="icon icon-edit"></span>' + 
 				'<span>' + t('sharerenamer', 'Rename link') + '</span>' + 
 			'</a>' +
-		'</li>';
-		$clipboardButtonMenuItem.after($shareRenamerButtonMenuItem);
-
-		$linkRenamerButtonElement = 
-			'<li id="shareRenamerBaseUrlMenuItem class="hidden">' +
-				'<span class="menuitem">' +					
+		'</li>' +
+		'<li id="shareRenamerBaseUrlMenuItem class="hidden">' +
+			'<span class="menuitem">' +					
 				'<input id="ShareRenamerBaseUrl" class="hidden" type="text" value="" readonly autocomplete="off" spellcheck="false" autocorrect="off" />' +
-				'</span>' +
-			'</li>' +
-			'<li id="shareRenamerNewMenuItem class="hidden">' +
-				'<span class="menuitem">' +					
-					'<input id="ShareRenamerNew" type="text" class="hidden" placeholder="" autocomplete="off" spellcheck="false" autocorrect="off" />' +
-				'</span>' +
-			'</li>' +
-			'<li id="shareRenamerSaveMenuItem">' +
-				'<span class="menuitem">' +
-					'<input id="ShareRenamerSave" type="button" class="hidden button" value="' + t('sharerenamer', 'Rename') + '" />' +
-				'</span>' +
-			'</li>' +
-			'<li id="shareRenamerCancelMenuItem">' +
-				'<span class="menuitem">' +
-					'<input id="ShareRenamerCancel" type="button" class="hidden button" value="' + t('sharerenamer', 'Cancel') + '" />' +
-				'</span>' +
-			'</li>';
+			'</span>' +
+		'</li>' +
+		'<li id="shareRenamerNewMenuItem class="hidden">' +
+			'<span class="menuitem">' +					
+				'<input id="ShareRenamerNew" type="text" class="hidden" placeholder="" autocomplete="off" spellcheck="false" autocorrect="off" />' +
+			'</span>' +
+		'</li>' +
+		'<li id="shareRenamerSaveMenuItem">' +
+			'<span class="menuitem">' +
+				'<input id="ShareRenamerSave" type="button" class="hidden button" value="' + t('sharerenamer', 'Rename') + '" />' +
+			'</span>' +
+		'</li>' +
+		'<li id="shareRenamerCancelMenuItem">' +
+			'<span class="menuitem">' +
+				'<input id="ShareRenamerCancel" type="button" class="hidden button" value="' + t('sharerenamer', 'Cancel') + '" />' +
+			'</span>' +
+		'</li>';
 
-		$linkTextMenu.after($linkRenamerButtonElement);
+		$linkTextMenuParent.before($shareRenamerButtonMenuItem);
 
 		$('#startShareRenamer').click(function () {
 			var url = $linkText.val();
@@ -65,6 +63,8 @@ ShareRenamerFiles.hijackShare = function () {
 		});
 
 		$('#ShareRenamerCancel').click(function () {
+			$('#ShareRenamerNew').tooltip('hide');
+			$('#ShareRenamerNew').tooltip('destroy');
 			$('#ShareRenamerNew').val('');
 			$('#ShareRenamerSave').click();
 			$('#shareRenamerNewMenuItem').addClass('hidden');
@@ -85,16 +85,17 @@ ShareRenamerFiles.hijackShare = function () {
 			var rx = /^[a-zA-Z0-9\-_]+$/g;
 
 			if ($(this).val() != '' && !rx.test($(this).val())) {
-				$(this).tooltip({
+				$('#ShareRenamerNew').tooltip({
 					placement: 'top',
 					trigger: 'manual',
 					title: t('sharerenamer', 'Only the following characters are allowed for links: %s').replace('%s', 'a-z, A-Z, 0-9, -, _')
 				});
-				$(this).tooltip('show');
+
+				$('#ShareRenamerNew').tooltip('show');
 			} 
 			else {
-				$(this).tooltip('hide');
-				$(this).tooltip('destroy');
+				$('#ShareRenamerNew').tooltip('hide');
+				$('#ShareRenamerNew').tooltip('destroy');
 
 				if (event.keyCode === 13) {
 					$('#ShareRenamerSave').click();
@@ -132,19 +133,13 @@ ShareRenamerFiles.hijackShare = function () {
 					$('#ShareRenamerNew').val('');
 				} 
 				else if (exec == 'exists') {
-					$('#ShareRenamerNew').tooltip({
+					$(this).tooltip({
 						placement: 'top',
 						trigger: 'manual',
 						title: t('files', 'Link {newname} already exists. Please choose another link name.').replace('{newname}', "'" + new_token + "'")
-					});
-					_.delay(function() {
-						$('#ShareRenamerNew').tooltip('hide');
-						$('#ShareRenamerNew').tooltip('destroy');
-					}, 3000);
-					
-					$('#ShareRenamerNew').tooltip('show');
-
-					$('#ShareRenamerNew').select();
+					});				
+					$(this).tooltip('show');
+					$(this).select();
 					return false;
 				} 
 				else if (exec == 'error') {
