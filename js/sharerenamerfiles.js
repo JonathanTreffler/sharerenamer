@@ -138,14 +138,14 @@ ShareRenamerFiles.hijackShare = function () {
 							$('#ShareRenamerNew-' + controlid).val('');
 						} 
 						else if (exec == 'exists') {
-							$(this).tooltip({
+							$('#ShareRenamerNew-' + controlid).tooltip({
 								placement: 'top',
 								trigger: 'manual',
-								title: t('files', 'Link {newname} already exists. Please choose another link name.').replace('{newname}', "'" + new_token + "'")
+								title: t('sharerenamer', 'Link {newname} already exists. Please choose another link name.').replace('{newname}', "'" + new_token + "'")
 							});
 
-							$(this).tooltip('show');
-							$(this).select();
+							$('#ShareRenamerNew-' + controlid).tooltip('show');
+							$('#ShareRenamerNew-' + controlid).select();
 							return false;
 						} 
 						else if (exec == 'error') {
