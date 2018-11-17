@@ -1,11 +1,20 @@
 # Changelog
 
+## 2.3.0
+### Fixed
+- Tool tips are closed when renaming is cancelled.
+- Correct translation on tool tip when link name is already used.
+
+### Added
+- Support for Nextcloud 15.
+- Translations.
+
 ## 2.2.0
 ### Fixed
 - After renaming a link, the social sharing links were not updated.
 
 ### Added
-- Translations
+- Translations.
 
 ## 2.1.1
 ### Added
@@ -20,7 +29,7 @@
 - Required Nextcloud version changed from 14.0 to 14.
 
 ### Added
-- Translations
+- Translations.
 
 ## 2.0.0
 ### Changed
