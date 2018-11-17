@@ -161,6 +161,14 @@ ShareRenamerFiles.hijackShare = function () {
 					$('#ShareRenamerBaseUrl-' + controlid).addClass('hidden');
 
 					// Refresh clipboard buttons text
+					new Clipboard('.clipboard-button', {
+						text: function(trigger) {
+							var x = linkText.val();
+							return linkText.val();
+						}
+					});
+
+					// Nextcloud 14
 					new Clipboard('.clipboardButton', {
 						text: function(trigger) {
 							var x = linkText.val();
