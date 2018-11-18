@@ -1,7 +1,7 @@
 # Changelog
 
 # 1.7.0
-## Fixed
+### Fixed
 - Tool tips are closed when renaming is cancelled.
 - Correct translation on tool tip when link name is already used.
 
