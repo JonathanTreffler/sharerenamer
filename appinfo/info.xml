@@ -20,6 +20,6 @@ You can also rename links in the Gallery app.]]></description>
 	<repository>https://github.com/DecaTec/sharerenamer</repository>
 	<screenshot>https://github.com/DecaTec/sharerenamer/raw/master/screenshots/sharerenamer.png</screenshot>
 	<dependencies>
-		<nextcloud min-version="14"/>
+		<nextcloud min-version="14" max-version="15"/>
 	</dependencies>
 </info>
