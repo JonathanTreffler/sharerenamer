@@ -163,7 +163,6 @@ ShareRenamerFiles.hijackShare = function () {
 					// Refresh clipboard buttons text
 					new Clipboard('.clipboard-button', {
 						text: function(trigger) {
-							var x = linkText.val();
 							return linkText.val();
 						}
 					});
@@ -171,7 +170,6 @@ ShareRenamerFiles.hijackShare = function () {
 					// Nextcloud 14
 					new Clipboard('.clipboardButton', {
 						text: function(trigger) {
-							var x = linkText.val();
 							return linkText.val();
 						}
 					});
