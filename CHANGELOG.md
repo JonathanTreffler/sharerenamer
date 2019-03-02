@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.4.0
+### Fixed
+- Maximum length of a shared link: 32 characters. An error message will appear when this length is exceeded.
+
+### Added
+- Translations
+
 ## 2.3.0
 ### Fixed
 - Tool tips are closed when renaming is cancelled.

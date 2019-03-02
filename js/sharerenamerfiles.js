@@ -99,6 +99,15 @@ ShareRenamerFiles.hijackShare = function () {
 
 						$('#ShareRenamerNew-' + controlid).tooltip('show');
 					} 
+					else if ($(this).val() != '' && $(this).val().length > 32 ) {
+						$('#ShareRenamerNew-' + controlid).tooltip({
+							placement: 'top',
+							trigger: 'manual',
+							title: t('sharerenamer', 'Maximum length of a link: 32 characters')
+						});
+
+						$('#ShareRenamerNew-' + controlid).tooltip('show');
+					} 
 					else {
 						$('#ShareRenamerNew-' + controlid).tooltip('hide');
 						$('#ShareRenamerNew-' + controlid).tooltip('destroy');
@@ -128,6 +137,12 @@ ShareRenamerFiles.hijackShare = function () {
 						$('#ShareRenamerNew-' + controlid).select();
 						return false;	
 					} 
+					else if (new_token != '' && new_token.length > 32)
+					{
+						// tooltip is shown, so just don't do anything
+						$('#ShareRenamerNew-' + controlid).select();
+						return false;	
+					}
 					else if (new_token != '') {
 						var init = new ShareRenamer(OC.generateUrl('/apps/sharerenamer/rename'));
 						var exec = init.Rename(old_token, new_token);
