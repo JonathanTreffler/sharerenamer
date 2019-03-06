@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.5.0
+### Fixed
+- The maximum length of a shared link (32 characters) is now also checked in the Gallery app.
+- When renaming is cancelled in the Gallery app, possibly shown error messages disappear.
+
 ## 2.4.0
 ### Fixed
 - Maximum length of a shared link: 32 characters. An error message will appear when this length is exceeded.

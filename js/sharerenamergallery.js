@@ -54,6 +54,8 @@ ShareRenamerFiles.showRenameOnGallery = function () {
     });
 
     $('#ShareRenamerCancel').click(function () {
+        $('#ShareRenamerNew').tooltip('hide');
+        $('#ShareRenamerNew').tooltip('destroy');
         $('#ShareRenamerNew').val('');
         $('#ShareRenamerSave').click();
     });
@@ -73,8 +75,19 @@ ShareRenamerFiles.showRenameOnGallery = function () {
                 trigger: 'manual',
                 title: t('sharerenamer', 'Only the following characters are allowed for links: %s').replace('%s', ' a-z, A-Z, 0-9, -, _ ')
             });
+
             $(this).tooltip('show');
-        } else {
+        } 
+        else if ($(this).val() != '' && $(this).val().length > 32 ) {
+            $(this).tooltip({
+                placement: 'top',
+                trigger: 'manual',
+                title: t('sharerenamer', 'Maximum length of a link: 32 characters')
+            });
+
+            $(this).tooltip('show');
+        } 
+        else {
             $(this).tooltip('hide');
             $(this).tooltip('destroy');
 
@@ -97,6 +110,12 @@ ShareRenamerFiles.showRenameOnGallery = function () {
             $('#ShareRenamerNew').val('');
         }
         else if (new_token != '' && !rx.test(new_token)) {
+            // tooltip is shown, so just don't do anything
+            $('#ShareRenamerNew').select();
+            return false;
+        }
+        else if (new_token != '' && new_token.length > 32)
+        {
             // tooltip is shown, so just don't do anything
             $('#ShareRenamerNew').select();
             return false;
