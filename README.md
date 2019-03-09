@@ -14,7 +14,7 @@ You can also rename links in the Gallery app.
 * Nextcloud >= 9
 
 ## Install
-### Nextcloud app store
+### Nextcloud app store (*recommended*)
 Just install the app from the [Nextcloud app store](https://apps.nextcloud.com/apps/sharerenamer). It can be found under the 'tools' category.
 
 ### Manual installation
