@@ -4,6 +4,7 @@
     "Rename" : "Hernoemen",
     "Cancel" : "Annuleren",
     "Only the following characters are allowed for links: %s" : "Alleen de volgende tekens zijn toegestaan voor links: %s",
+    "Maximum length of a link: 32 characters" : "Maximum lengte van een link: 32 tekens",
     "Link {newname} already exists. Please choose another link name." : "Link {newname} bestaat al. Kies een andere link.",
     "ShareRenamer" : "ShareRenamer",
     "A simple share link renamer add-in for the Files app" : "Een eenvioudige deellink hernoemer voor de Bestanden app",
