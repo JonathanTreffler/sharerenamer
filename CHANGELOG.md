@@ -1,7 +1,6 @@
 # Changelog
 
 ## 2.5.1
-
 ### Added
 - Added hints that using this app can be a potential security risk when links can be guessed easily.
 - Translations
