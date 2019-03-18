@@ -8,13 +8,12 @@
 	
 You can also rename links in the Gallery app.
 
-
-Please be aware that this is a potential security risk: links could be guessed! We discourage using this app on large instances that host sensitive data!]]></description>
+Please be aware that this is a potential security risk: links could be guessed! We discourage using this app on large instances that host sensitive data! We also encourage you to password protect such shared links.]]></description>
 	<licence>AGPL</licence>
 	<author homepage="https://decatec.de">DecaTec</author>
 	<author>Fallon Turner</author>
 	<author homepage="https://github.com/LazyShpee">LazyShpee</author>
-	<version>2.5.0</version>
+	<version>2.5.1</version>
 	<namespace>ShareRenamer</namespace>
 	<category>tools</category>
 	<website>https://github.com/DecaTec/sharerenamer</website>
