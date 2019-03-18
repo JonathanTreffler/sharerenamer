@@ -10,6 +10,9 @@ This is an add-in to the Files app, which allows you to customize your share tok
 
 You can also rename links in the Gallery app.
 
+
+Please be aware that this is a potential security risk: links could be guessed! We discourage using this app on large instances that host sensitive data! We also encourage you to password protect such shared links.
+
 ## Requirements
 * Nextcloud >= 9
 
