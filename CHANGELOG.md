@@ -3,6 +3,7 @@
 ## 2.6.0
 ### Added
 - Nextcloud 16 support
+- Translations
 
 ## 2.5.1
 ### Added
