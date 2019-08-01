@@ -25,24 +25,24 @@ class ShareRenamerMapper extends Mapper {
 		}
 
 		// Check if the share has the same name as a user
-		$sql = 'SELECT COUNT(*) FROM *PREFIX*users WHERE LOWER(uid) = ?';
-		$sql = $this->db->prepare($sql);
-		$sql->bindParam(1, $newtoken, \PDO::PARAM_STR);
-		$sql->execute();
-		$row = $sql->fetch();
-		$sql->closeCursor();
-		$shareIsUserName = $row['n']; // returns 0 or 1
+		$sql2 = 'SELECT COUNT(*) AS n FROM *PREFIX*users WHERE LOWER(uid) = ?';
+		$sql2 = $this->db->prepare($sql2);
+		$sql2->bindParam(1, strtolower($newtoken), \PDO::PARAM_STR);
+		$sql2->execute();
+		$row2 = $sql2->fetch();
+		$sql2->closeCursor();
+		$shareIsUserName = $row2['n']; // returns 0 or 1
 
 		if ($shareIsUserName === '1') {
 			return 'userexists';
 		}
 
 		// Now change token in database
-		$sql2 = 'UPDATE *PREFIX*share SET token = ? WHERE token = ?';
-		$sql2 = $this->db->prepare($sql2);
-		$sql2->bindParam(1, $newtoken, \PDO::PARAM_STR);
-		$sql2->bindParam(2, $oldtoken, \PDO::PARAM_STR);
-		$sql2->execute();
+		$sql3 = 'UPDATE *PREFIX*share SET token = ? WHERE token = ?';
+		$sql3 = $this->db->prepare($sql3);
+		$sql3->bindParam(1, $newtoken, \PDO::PARAM_STR);
+		$sql3->bindParam(2, $oldtoken, \PDO::PARAM_STR);
+		$sql3->execute();
 
 		return 'pass';
 	}

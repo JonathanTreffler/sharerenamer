@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.6.1
+### Added
+- Translations
+
+### Fixed
+- A shared link cannot have the same name as a user.
+
 ## 2.6.0
 ### Added
 - Nextcloud 16 support
