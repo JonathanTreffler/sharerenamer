@@ -11,7 +11,7 @@ class ShareRenamerMapper extends Mapper {
 	}
 
 	public function trytokeninsert($oldtoken, $newtoken) {
-		// check if new token already exists
+		// Check if new token already exists
 		$sql = 'SELECT COUNT(*) AS n FROM *PREFIX*share WHERE token = ?';
 		$sql = $this->db->prepare($sql);
 		$sql->bindParam(1, $newtoken, \PDO::PARAM_STR);
@@ -24,7 +24,20 @@ class ShareRenamerMapper extends Mapper {
 			return 'exists';
 		}
 
-		// now change token in database
+		// Check if the share has the same name as a user
+		$sql = 'SELECT COUNT(*) FROM *PREFIX*users WHERE LOWER(uid) = ?';
+		$sql = $this->db->prepare($sql);
+		$sql->bindParam(1, $newtoken, \PDO::PARAM_STR);
+		$sql->execute();
+		$row = $sql->fetch();
+		$sql->closeCursor();
+		$shareIsUserName = $row['n']; // returns 0 or 1
+
+		if ($shareIsUserName === '1') {
+			return 'userexists';
+		}
+
+		// Now change token in database
 		$sql2 = 'UPDATE *PREFIX*share SET token = ? WHERE token = ?';
 		$sql2 = $this->db->prepare($sql2);
 		$sql2->bindParam(1, $newtoken, \PDO::PARAM_STR);

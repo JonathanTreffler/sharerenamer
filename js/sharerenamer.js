@@ -16,7 +16,7 @@ ShareRenamer.prototype = {
 		});
 		
 		request.done(function(msg) {
-			// will be 'exists' or 'pass'
+			// will be 'exists', 'userexists' or 'pass'
 			result = msg;
 		});
 

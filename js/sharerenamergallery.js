@@ -144,8 +144,23 @@ ShareRenamerFiles.showRenameOnGallery = function () {
                 $('#ShareRenamerNew').select();
                 return false;
             } 
+            else if (exec == 'userexists') {
+                $('#ShareRenamerNew').tooltip({
+                    placement: 'top',
+                    trigger: 'manual',
+                    title: t('files', 'Link {newname} cannot be defined. Please choose another link name.').replace('{newname}', "'" + new_token + "'")
+                });
+                _.delay(function() {
+                    $('#ShareRenamerNew').tooltip('hide');
+                    $('#ShareRenamerNew').tooltip('destroy');
+                }, 3000);
+
+                $('#ShareRenamerNew').tooltip('show');
+                $('#ShareRenamerNew').select();
+                return false;
+            } 
             else if (exec == 'error') {
-                // alert is in AJAX call already
+                // Alert is in AJAX call already
                 return false;
             }
         }

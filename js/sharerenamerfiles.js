@@ -163,8 +163,19 @@ ShareRenamerFiles.hijackShare = function () {
 							$('#ShareRenamerNew-' + controlid).select();
 							return false;
 						} 
+						else if (exec == 'userexists') {
+							$('#ShareRenamerNew-' + controlid).tooltip({
+								placement: 'top',
+								trigger: 'manual',
+								title: t('sharerenamer', 'Link {newname} cannot be defined. Please choose another link name.').replace('{newname}', "'" + new_token + "'")
+							});
+
+							$('#ShareRenamerNew-' + controlid).tooltip('show');
+							$('#ShareRenamerNew-' + controlid).select();
+							return false;
+						} 
 						else if (exec == 'error') {
-							// alert is in AJAX call already
+							// Alert is in AJAX call already
 							return false;
 						}
 					}
