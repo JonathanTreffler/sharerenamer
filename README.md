@@ -1,5 +1,3 @@
-**Archived, moved to Codeberg: https://codeberg.org/DecaTec/sharerenamer**
-
 [![Github All Releases](https://img.shields.io/github/downloads/DecaTec/sharerenamer/total.svg)](https://www.somsubhra.com/github-release-stats/?username=DecaTec&repository=sharerenamer)
 [![AGPL-3.0](https://img.shields.io/github/license/DecaTec/sharerenamer.svg)](https://github.com/DecaTec/sharerenamer/blob/master/LICENSE)
 
