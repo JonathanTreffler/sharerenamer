@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.7.0
+### Added
+- Nextcloud 17 support
+- Translations
+
 ## 2.6.1
 ### Added
 - Translations
