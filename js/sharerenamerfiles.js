@@ -123,6 +123,7 @@ ShareRenamerFiles.hijackShare = function () {
 					$('#shareTabView input').attr('disabled', false);
 					var linktxt = linkText.val();
 					var oldLinkTxt = linktxt;
+					var newLink = linktxt;
 					var n = linktxt.lastIndexOf("/");
 					var old_token = linktxt.substr(n + 1);
 					var new_token = $('#ShareRenamerNew-' + controlid).val();
@@ -148,7 +149,8 @@ ShareRenamerFiles.hijackShare = function () {
 						var exec = init.Rename(old_token, new_token);
 
 						if (exec == 'pass') {
-							linkText.val(linkText.val().replace(old_token, new_token));
+							newLink = linkText.val().replace(old_token, new_token);
+							linkText.val(newLink);
 							$('#ShareRenamerNew-' + controlid).attr('placeholder', new_token);
 							$('#ShareRenamerNew-' + controlid).val('');
 						} 
@@ -187,17 +189,10 @@ ShareRenamerFiles.hijackShare = function () {
 					$('#ShareRenamerBaseUrl-' + controlid).addClass('hidden');
 
 					// Refresh clipboard buttons text
-					new Clipboard('.clipboard-button', {
-						text: function(trigger) {
-							return linkText.val();
-						}
-					});
-
-					// Nextcloud 14
-					new Clipboard('.clipboardButton', {
-						text: function(trigger) {
-							return linkText.val();
-						}
+					$('.clipboard-button').each(function() {
+						var tmp = $(this).attr('data-clipboard-text');
+						if($(this).attr('data-clipboard-text') == oldLinkTxt)
+							$(this).attr('data-clipboard-text', newLink);
 					});
 
 					// Refresh social share links
