@@ -7,7 +7,7 @@ sign_dir=$(build_dir)/sign
 appstore_dir=$(build_dir)/appstore
 source_dir=$(build_dir)/source
 package_name=$(app_name)
-cert_dir=$(CURDIR)/../sharerenamerPrepareRelease
+cert_dir=$(Home)/Dev/Nextcloud/certs
 
 appstore:
 	mkdir -p $(sign_dir)
