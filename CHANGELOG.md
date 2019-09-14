@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.7.1
+### Added
+- Translations
+
+### Fixed
+- When there are more links for one share, the text copied from the clipboard button was not alway correct after renaming a link.
+
 ## 2.7.0
 ### Added
 - Nextcloud 17 support
