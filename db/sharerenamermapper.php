@@ -27,7 +27,8 @@ class ShareRenamerMapper extends Mapper {
 		// Check if the share has the same name as a user
 		$sql2 = 'SELECT COUNT(*) AS n FROM *PREFIX*users WHERE LOWER(uid) = ?';
 		$sql2 = $this->db->prepare($sql2);
-		$sql2->bindParam(1, strtolower($newtoken), \PDO::PARAM_STR);
+		$toLower = strtolower($newtoken);
+		$sql2->bindParam(1, $toLower, \PDO::PARAM_STR);
 		$sql2->execute();
 		$row2 = $sql2->fetch();
 		$sql2->closeCursor();

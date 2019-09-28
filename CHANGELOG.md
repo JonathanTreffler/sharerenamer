@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.7.2
+### Added
+- Translations
+
+### Fixed
+- Warning in Nextcloud Log when renaming a link.
+
 ## 2.7.1
 ### Added
 - Translations
