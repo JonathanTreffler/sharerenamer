@@ -5,7 +5,7 @@
 - Translations
 
 ### Fixed
-- Warning in Nextcloud Log when renaming a link.
+- Warning in Nextcloud log when renaming a link.
 
 ## 2.7.1
 ### Added
