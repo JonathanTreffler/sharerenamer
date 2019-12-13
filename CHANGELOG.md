@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.7.3
+### Fixed
+- Multiple shared links with the same name could be created when using PostgreSQL.
+
 ## 2.7.2
 ### Added
 - Translations
