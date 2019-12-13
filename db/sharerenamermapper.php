@@ -20,7 +20,7 @@ class ShareRenamerMapper extends Mapper {
 		$sql->closeCursor();
 		$alreadyexists = $row['n']; // returns 0 or 1
 
-		if ($alreadyexists === '1') {
+		if ($alreadyexists > '0') {
 			return 'exists';
 		}
 
