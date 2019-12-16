@@ -18,7 +18,7 @@ class ShareRenamerMapper extends Mapper {
 		$sql->execute();
 		$row = $sql->fetch();
 		$sql->closeCursor();
-		$alreadyexists = $row['n']; // returns 0 or 1
+		$alreadyexists = $row['n'];
 
 		if ($alreadyexists > '0') {
 			return 'exists';
@@ -32,9 +32,9 @@ class ShareRenamerMapper extends Mapper {
 		$sql2->execute();
 		$row2 = $sql2->fetch();
 		$sql2->closeCursor();
-		$shareIsUserName = $row2['n']; // returns 0 or 1
+		$shareIsUserName = $row2['n'];
 
-		if ($shareIsUserName === '1') {
+		if ($shareIsUserName > '0') {
 			return 'userexists';
 		}
 
