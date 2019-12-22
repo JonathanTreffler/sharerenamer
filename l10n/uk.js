@@ -6,7 +6,9 @@ OC.L10N.register(
     "Rename" : "Переіменувати",
     "Cancel" : "Відмінити",
     "Only the following characters are allowed for links: %s" : "Тільки вказані символи дозволені для використання в посиланнях: %s",
+    "Maximum length of a link: 32 characters" : "Максимальна довжина посилання: 32 символи",
     "Link {newname} already exists. Please choose another link name." : "Посилання {newname} вже існує. Будь-ласка оберіть для посилання інше ім'я.",
+    "Link {newname} cannot be defined. Please choose another link name." : "Посилання {newname} не може бути задане. Будь-ласка оберіть для посилання інше ім'я.",
     "ShareRenamer" : "ShareRenamer",
     "A simple share link renamer add-in for the Files app" : "Доповнення до додатку Files - просте перейменування посилань загальних ресурсів"
 },

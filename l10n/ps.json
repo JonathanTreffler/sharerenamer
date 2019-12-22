@@ -1,4 +1,6 @@
 { "translations": {
-    "Error" : "شسیب"
+    "Error" : "شسیب",
+    "Rename" : "نوم بدلول",
+    "Cancel" : "پرېښول"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
