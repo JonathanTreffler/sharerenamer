@@ -1,2 +1,6 @@
 .vscode/launch.json
-/build
+.idea
+*.iml
+/vendor/
+/build/
+node_modules/
