@@ -4,6 +4,13 @@ OC.L10N.register(
     "Error" : "Errorea",
     "Rename link" : "Aldatu izena estekari",
     "Rename" : "Aldatu izena",
-    "Cancel" : "Utzi"
+    "Cancel" : "Utzi",
+    "Only the following characters are allowed for links: %s" : "Esteketan karaktere hauek bakarrik erabili daitezke: %s",
+    "Maximum length of a link: 32 characters" : "Esteka baten gehienezko luzera: 32 karaktere",
+    "Link {newname} already exists. Please choose another link name." : "{newname} izeneko esteka badago jada. Erabili beste izen bat estekarentzat.",
+    "Link {newname} cannot be defined. Please choose another link name." : "{newname} esteka ezin da definitu. Erabili beste izen bat estekarentzat.",
+    "ShareRenamer" : "Partekatzeak berrizendatzeko tresna",
+    "A simple share link renamer add-in for the Files app" : "Fitxategien aplikazioan erabiltzeko gehigarria partekatzeko estekak berrizendatzeko.",
+    "This is an add-in to the Files app, which allows you to customize your share tokens, so your links can be https://mycloud.de/s/mysharedlink instead of https://mycloud.de/s/qPv1SwbU5M2YEoJZ. Just share a file or folder (or click an already shared one) and a new button for renaming the link will appear below the 'Copy URL' button in the menu of the share.\n\t\nYou can also rename links in the Gallery app.\n\nPlease be aware that this is a potential security risk: links could be guessed! We discourage using this app on large instances that host sensitive data! We also encourage you to password protect such shared links." : "Fitxategien aplikazioaren gehigarri bat da hau, partekatzen dituzun esteken izenak nahi duzun bezala pertsonalizatzeko. Horrela zuk emandako lotura bat https://nirehodeia.eus/s/qaA3ssidJe beharrean https://nirehodeia.eus/s/oporretakoargazkiak izan daiteke. Partekatu fitxategi edo karpeta bat (edo egin klik partekatutako baten) eta esteka berrizendatzen utziko dizun botoi berri bat agertuko da. \n\t\nArgazkien aplikazioko estekak ere berrizendatu ditzakezu.\n\nKontutan izan hau segurtasun arazo bat izan daitekela: estekak asmatu egin daitezke! Ez dugu gomendatzen datu oso pribatuak dituzten instantzietan aplikazio hau erabiltzea! Edonola ere horrelako estekak pasahitzarekin babestea gomendatzen dugu."
 },
 "nplurals=2; plural=(n != 1);");
