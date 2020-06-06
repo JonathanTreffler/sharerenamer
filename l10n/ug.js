@@ -5,4 +5,4 @@ OC.L10N.register(
     "Rename" : "ئات ئۆزگەرت",
     "Cancel" : "ۋاز كەچ"
 },
-"nplurals=1; plural=0;");
+"nplurals=2; plural=(n != 1);");
