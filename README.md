@@ -3,7 +3,7 @@
 
 # ShareRenamer
 
-## ⚠️ Not longer maintined/looking for maintainers ⚠️
+## ⚠️ Not longer maintained/looking for maintainers ⚠️
 
 The app is no longer maintained! Issues and pull requests will not be attended.
 
