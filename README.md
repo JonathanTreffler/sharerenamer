@@ -25,7 +25,7 @@ You can also rename links in the Gallery app.
 Please be aware that this is a potential security risk: links could be guessed! We discourage using this app on large instances that host sensitive data! We also encourage you to password protect such shared links.
 
 ## Requirements
-* Nextcloud 9-17
+* Nextcloud 9-17 (not compatible to Nextcloud 18+)
 
 ## Install
 ### Nextcloud app store (*recommended*)
