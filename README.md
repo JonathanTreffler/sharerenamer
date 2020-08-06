@@ -2,6 +2,18 @@
 [![AGPL-3.0](https://img.shields.io/github/license/DecaTec/sharerenamer.svg)](https://github.com/DecaTec/sharerenamer/blob/master/LICENSE)
 
 # ShareRenamer
+
+## ⚠️ Not longer maintined/looking for maintainers ⚠️
+
+The app is no longer maintained! Issues and pull requests will not be attended.
+
+The app is only compatible up to Nextcloud 17. It will probably need some changes in the Nextcloud core code in order to make it compatible to Nextloud 18+.
+
+Because I don't have the time to maintain this project any further, I'm looking for a new maintainer. If you're interested, please open an issue or contact me.
+
+
+
+
 ## A simple share link renamer add-in for the Files app in Nextcloud
 
 ![](screenshots/sharerenamer.png)
