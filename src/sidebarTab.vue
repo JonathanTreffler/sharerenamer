@@ -61,11 +61,34 @@ export default {
 			console.error('Unable to unmount Chat tab', error)
 		}
 	},
+    methods: {
+        rename: function(old_token, new_token) {
+            // this._baseUrl already ends with /rename, found in routes.php
+            var result = 'error';
+            var request = $.ajax({
+                url: this._baseUrl,
+                data: {'old_token' : old_token, 'new_token' : new_token},
+                method: 'POST',
+                async: false
+            });
+            
+            request.done(function(msg) {
+                // will be 'exists', 'userexists' or 'pass'
+                result = msg;
+            });
+
+            request.fail(function( jqXHR, textStatus ) {
+                OC.Notification.show(t('sharerenamer', 'Error') + ': ' + textStatus, { type: 'error' });
+            });
+            
+            return result;
+        },
+    },
 }
 </script>
 
 <style scoped>
-#sharerenamer-chat {
+#tab-sharerenamer {
 	height: 100%;
 	padding: 0;
 }
