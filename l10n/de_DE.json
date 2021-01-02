@@ -4,7 +4,7 @@
     "Rename" : "Umbenennen",
     "Cancel" : "Abbrechen",
     "Only the following characters are allowed for links: %s" : "Für Links sind nur die folgenden Zeichen erlaubt: %s",
-    "Maximum length of a link: 32 characters" : "Ein Link kann maximal 32 Zeichen lang sein",
+    "Maximum length of a link: 32 characters" : "Maximale Länge eines Links: 32 Zeichen",
     "Link {newname} already exists. Please choose another link name." : "Link {newname} existiert bereits. Bitte einen andern Namen wählen.",
     "Link {newname} cannot be defined. Please choose another link name." : "Link {newname} kann nicht angelegt werden. Bitte einen anderen Namen wählen.",
     "ShareRenamer" : "ShareRenamer",
