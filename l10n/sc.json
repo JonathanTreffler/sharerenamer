@@ -1,5 +1,6 @@
 { "translations": {
     "Error" : "Errore",
+    "Rename" : "Torra a numenare",
     "Cancel" : "Annulla"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
