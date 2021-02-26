@@ -1,5 +1,6 @@
 { "translations": {
     "Error" : "ຜິດພາດ",
-    "Rename" : "ປ່ຽນຊື່"
+    "Rename" : "ປ່ຽນຊື່",
+    "Cancel" : "ຍົກເລີກ"
 },"pluralForm" :"nplurals=1; plural=0;"
 }
