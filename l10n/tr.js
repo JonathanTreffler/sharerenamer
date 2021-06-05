@@ -5,7 +5,7 @@ OC.L10N.register(
     "Rename link" : "Bağlantıyı yeniden adlandır",
     "Rename" : "Yeniden adlandır",
     "Cancel" : "İptal",
-    "Only the following characters are allowed for links: %s" : "Bağlantılarda yalnız şu karakterler kullanılabilir: %s",
+    "Only the following characters are allowed for links: %s" : "Bağlantılarda yalnız şu karakterler kullanılabilir: %s",
     "Maximum length of a link: 32 characters" : "Bir bağlantı en fazla 32 karakter uzunluğunda olabilir",
     "Link {newname} already exists. Please choose another link name." : "{newname} bağlantısı zaten var. Lütfen başka bir bağlantı adı seçin.",
     "Link {newname} cannot be defined. Please choose another link name." : "{newname} bağlantısı tanımlanamaz. Lütfen başka bir bağlantı adı seçin.",
