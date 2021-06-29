@@ -45,7 +45,7 @@ services:
     volumes:
       - nextcloud:/var/www/html
       - config:/var/www/html/config
-      - /workspace/:/var/www/html/custom_apps/
+      - ${GITPOD_REPO_ROOT}:/var/www/html/custom_apps/app
     environment:
       - MYSQL_PASSWORD=wdGq73jQB0p373gLdf6yLRj5
       - MYSQL_DATABASE=nextcloud
