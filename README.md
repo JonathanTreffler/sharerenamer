@@ -1,4 +1,4 @@
-[![Github All Releases](https://img.shields.io/github/downloads/JonathanTreffler/sharerenamer/total.svg)](https://www.somsubhra.com/github-release-stats/?username=JonathanTreffler&repository=sharerenamer)
+[![Github All Releases](https://img.shields.io/github/downloads/JonathanTreffler/sharerenamer/total.svg)](https://github.com/JonathanTreffler/sharerenamer/releases)
 [![AGPL-3.0](https://img.shields.io/github/license/JonathanTreffler/sharerenamer.svg)](https://github.com/JonathanTreffler/sharerenamer/blob/master/LICENSE)
 
 # ShareRenamer
