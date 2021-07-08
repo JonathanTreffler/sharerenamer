@@ -1,45 +1,21 @@
 <template>
-	<Tab
-		:id="id"
-		:icon="icon"
-		:name="name"
-		:class="{ 'icon-loading': loading }">
-	</Tab>
+	<div>
+		<p>Test</p>
+		<p>{{ fileInfo }}</p>
+	</div>
 </template>
 
 <script>
-import Tab from '@nextcloud/vue/dist/Components/AppSidebarTab'
 export default {
-	name: 'FilesSidebarTab',
-	components: {
-		Tab,
-	},
-	props: {
-		fileInfo: {
-			type: Object,
-			default: () => {},
-			required: true,
-		},
-	},
+	name: 'SharerenamerTab',
 	data() {
 		return {
-			icon: 'icon-sharerenamer',
 			loading: false,
-			name: 'Sharerenamer',
-			tab: null,
 			token: null,
+			fileInfo: {},
 		}
 	},
 	computed: {
-		/**
-		 * Needed to differenciate the tabs
-		 * pulled from the AppSidebarTab component
-		 *
-		 * @returns {string}
-		 */
-		id() {
-			return 'sharerenamer'
-		},
 		/**
 		 * Returns the current active tab
 		 * needed because AppSidebarTab also uses $parent.activeTab
@@ -50,15 +26,11 @@ export default {
 			return this.$parent.activeTab
 		},
 	},
-	beforeMount() {
-	},
-	mounted() {
-	},
 	beforeDestroy() {
 		try {
 			this.tab.$destroy()
 		} catch (error) {
-			console.error('Unable to unmount Chat tab', error)
+			console.error('Unable to unmount Sharerenamer tab', error)
 		}
 	},
     methods: {
@@ -83,6 +55,10 @@ export default {
             
             return result;
         },
+		update(fileInfo) {
+			console.log(fileInfo);
+			this.fileInfo = fileInfo;
+		}
     },
 }
 </script>
