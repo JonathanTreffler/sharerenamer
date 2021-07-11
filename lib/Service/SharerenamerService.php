@@ -6,15 +6,15 @@ use Exception;
 use OCP\AppFramework\Db\DoesNotExistException;
 use OCP\AppFramework\Db\MultipleObjectsReturnedException;
 
-use OCA\ShareRenamer\Db\ShareRenamer;
-use OCA\ShareRenamer\Db\ShareRenamerMapper;
+use OCA\ShareRenamer\Db\Sharerenamer;
+use OCA\ShareRenamer\Db\SharerenamerMapper;
 
 
-class ShareRenamerService {
+class SharerenamerService {
 
 	private $mapper;
 
-	public function __construct(ShareRenamerMapper $mapper){
+	public function __construct(SharerenamerMapper $mapper){
 		$this->mapper = $mapper;
 	}
 

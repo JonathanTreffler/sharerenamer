@@ -5,9 +5,9 @@ use OCP\IRequest;
 use OCP\AppFramework\Http\DataResponse;
 use OCP\AppFramework\Controller;
 
-use OCA\ShareRenamer\Service\ShareRenamerService;
+use OCA\ShareRenamer\Service\SharerenamerService;
 
-class ShareRenamerController extends Controller {
+class RenameController extends Controller {
 
     private $service;
     private $userId;
@@ -15,7 +15,7 @@ class ShareRenamerController extends Controller {
     use Errors;
 
     public function __construct($AppName, IRequest $request,
-                                ShareRenamerService $service, $UserId){
+                                SharerenamerService $service, $UserId){
         parent::__construct($AppName, $request);
         $this->service = $service;
         $this->userId = $UserId;

@@ -4,6 +4,6 @@ return [
 		'sharerenamer' => ['url' => '/sharerenamer']
 	],
 	'routes' => [
-		['name' => 'sharerenamer#rename', 'url' => '/rename', 'verb' => 'POST']
+		['name' => 'rename#rename', 'url' => '/rename', 'verb' => 'POST']
 	]
 ];

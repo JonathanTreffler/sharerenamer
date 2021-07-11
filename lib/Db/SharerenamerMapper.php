@@ -4,7 +4,7 @@ namespace OCA\ShareRenamer\Db;
 use \OCP\IDBConnection;
 use \OCP\AppFramework\Db\Mapper;
 
-class ShareRenamerMapper extends Mapper {
+class SharerenamerMapper extends Mapper {
 
 	public function __construct(IDBConnection $db) {
 		parent::__construct($db, 'share', '\OCA\ShareRenamer\Db\ShareRenamer');
