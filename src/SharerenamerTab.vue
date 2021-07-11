@@ -4,7 +4,7 @@
 			No shares to rename
 			<template #desc>You can create shares in the shares tab</template>
 		</EmptyContent>
-		<AppNavigationItem v-for="share in shares" :key="share.token" :title="share.token" :editable="true" editPlaceholder="token" icon="icon-share" />
+		<AppNavigationItem v-for="share in shares" :key="share.token" :title="share.token" :editable="true" editPlaceholder="token" icon="icon-share" @update:title="function(value){rename(share.token, value);}" />
 	</div>
 </template>
 
@@ -22,6 +22,7 @@ export default {
 			token: null,
 			fileInfo: {},
 			shares: [],
+			baseUrl: OC.generateUrl("/apps/sharerenamer"),
 		}
 	},
 	components: {
@@ -48,13 +49,14 @@ export default {
 	},
     methods: {
         rename: function(old_token, new_token) {
+			let self = this;
 
 			console.log(old_token, new_token);
 
             // this._baseUrl already ends with /rename, found in routes.php
             var result = 'error';
             var request = $.ajax({
-                url: this._baseUrl,
+                url: this.baseUrl + "/rename",
                 data: {'old_token' : old_token, 'new_token' : new_token},
                 method: 'POST',
                 async: false
@@ -63,6 +65,11 @@ export default {
             request.done(function(msg) {
                 // will be 'exists', 'userexists' or 'pass'
                 result = msg;
+
+				if(result == "pass") {
+					console.log(self.getShareByToken(old_token));
+					self.getShareByToken(old_token).token = new_token;
+				}
             });
 
             request.fail(function( jqXHR, textStatus ) {
@@ -101,7 +108,12 @@ export default {
 					}
 				}
 			})
-		}
+		},
+		getShareByToken(token) {
+			return this.shares.find(share => {
+				return share.token === token;
+			});
+		},
     },
 }
 </script>
