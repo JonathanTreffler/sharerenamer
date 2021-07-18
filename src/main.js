@@ -1,5 +1,4 @@
 import Vue from 'vue'
-import { translate as t } from '@nextcloud/l10n'
 import SharerenamerTab from './SharerenamerTab'
 
 const View = Vue.extend(SharerenamerTab)
@@ -7,7 +6,7 @@ let tabInstance = null
 
 window.addEventListener('DOMContentLoaded', function() {
 	if (OCA.Files && OCA.Files.Sidebar) {
-		let sharerenamerTab = new OCA.Files.Sidebar.Tab({
+		const sharerenamerTab = new OCA.Files.Sidebar.Tab({
 			id: 'sharerenamer',
 			name: t('sharerenamer', 'Share Rename'),
 			icon: 'icon-sharerenamer',
@@ -32,8 +31,8 @@ window.addEventListener('DOMContentLoaded', function() {
 				tabInstance = null
 			},
 			enabled(fileInfo) {
-				//return (fileInfo && !fileInfo.isDirectory());
-				return true;
+				// return (fileInfo && !fileInfo.isDirectory());
+				return true
 			},
 		})
 		OCA.Files.Sidebar.registerTab(sharerenamerTab)
