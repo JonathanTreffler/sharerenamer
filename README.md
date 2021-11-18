@@ -5,7 +5,7 @@
 
 The app is only compatible up to Nextcloud 17.
 
-A rewrite is currently being worked on to make it compatible with newer versions. A pre release compatible with Nextcloud 22 can be downloaded [here].(https://github.com/JonathanTreffler/sharerenamer/files/7216628/sharerenamer.zip)
+A rewrite is currently being worked on to make it compatible with newer versions. A pre release compatible with Nextcloud 22 can be downloaded [here](https://github.com/JonathanTreffler/sharerenamer/files/7216628/sharerenamer.zip).
 
 ## A simple share link renamer add-in for the Files app in Nextcloud
 
