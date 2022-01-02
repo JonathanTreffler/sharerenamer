@@ -7,7 +7,7 @@ sign_dir=$(build_dir)/sign
 appstore_dir=$(build_dir)/appstore
 source_dir=$(build_dir)/source
 package_name=$(app_name)
-cert_dir=$(HOME)/Dev/Nextcloud/certs
+cert_dir=$(HOME)/certs
 build_tools_directory=$(CURDIR)/build/tools
 composer=$(shell which composer 2> /dev/null)
 
@@ -16,12 +16,15 @@ appstore:
 	rsync -a \
 	--exclude=build \
 	--exclude=.git \
+	--exclude=.github \
 	--exclude=.tx \
 	--exclude=build \
 	--exclude=.gitignore \
 	--exclude=l10n/.gitkeep \
 	--exclude=Makefile \
 	--exclude=screenshots \
+	--exclude=gitpod \
+	--exclude=node_modules \
 	$(project_dir) $(sign_dir)
 
 	@echo "Signing..."
