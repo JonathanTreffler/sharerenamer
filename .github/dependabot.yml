@@ -3,20 +3,24 @@ updates:
 - package-ecosystem: composer
   directory: "/"
   schedule:
-    interval: weekly
-    day: saturday
+    interval: daily
     time: "03:00"
-    timezone: Europe/Paris
+    timezone: Europe/Berlin
   open-pull-requests-limit: 10
   labels:
   - dependencies
 - package-ecosystem: npm
   directory: "/"
   schedule:
-    interval: weekly
-    day: saturday
+    interval: daily
     time: "03:00"
-    timezone: Europe/Paris
+    timezone: Europe/Berlin
   open-pull-requests-limit: 10
   labels:
   - dependencies
+- package-ecosystem: "github-actions"
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "03:00"
+    timezone: Europe/Berlin
