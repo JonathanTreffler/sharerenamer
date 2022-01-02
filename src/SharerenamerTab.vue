@@ -21,7 +21,7 @@ import axios from '@nextcloud/axios'
 
 import AppNavigationItem from '@nextcloud/vue/dist/Components/AppNavigationItem'
 import EmptyContent from '@nextcloud/vue/dist/Components/EmptyContent'
-import { generateOcsUrl } from '@nextcloud/router'
+import { generateUrl, generateOcsUrl } from '@nextcloud/router'
 
 export default {
 	name: 'SharerenamerTab',
@@ -35,7 +35,7 @@ export default {
 			token: null,
 			fileInfo: {},
 			shares: [],
-			baseUrl: OC.generateUrl('/apps/sharerenamer'),
+			baseUrl: generateUrl('/apps/sharerenamer'),
 		}
 	},
 	computed: {
