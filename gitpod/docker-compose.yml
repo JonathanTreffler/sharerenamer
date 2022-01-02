@@ -34,7 +34,6 @@ services:
 
   app:
     image: nextcloud
-    #user: "${UID}:${GID}"
     build:
       context: .
       dockerfile: Dockerfile
