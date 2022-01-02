@@ -32,7 +32,7 @@ class RenameController extends Controller {
 			throw new \Exception('Request parameters are missing/incorrect.');
 		}
 
-		$result = $this->service->rename($_POST['old_token'], $_POST['new_token']);
+		$result = $this->service->rename($oldToken, $newToken);
 
 		if ($result === "pass") {
 			return new DataResponse("", Http::STATUS_OK);
