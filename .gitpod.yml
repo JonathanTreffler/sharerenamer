@@ -12,7 +12,7 @@ tasks:
   - name: Nextcloud Server
     init: |
       cd gitpod
-      docker-compose up --no-start
+      docker-compose pull
     command: |
       git config core.fileMode false
       chmod -R 777 .
