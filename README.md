@@ -28,10 +28,14 @@ Just install the app from the [Nextcloud app store](https://apps.nextcloud.com/a
 * Enable the app in the Apps section of your Nextcloud.
 
 ### Install from git
-* Simply clone the repo to your apps folder:
+* Simply clone the repo to your apps folder and build the frontend:
 ```
 cd /path/to/nextcloud/apps/
 git clone https://github.com/JonathanTreffler/sharerenamer.git
+cd sharerenamer/
+make composer
+make npm-init
+make build-js-production
 ```
 * Enable the app in the Apps section of your Nextcloud.
 
