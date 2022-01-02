@@ -65,6 +65,6 @@
 		"@nextcloud/eslint-config": "^5.1.0",
 		"@nextcloud/stylelint-config": "^1.0.0-beta.0",
 		"@nextcloud/webpack-vue-config": "^4.0.3",
-		"webpack-cli": "^4.7.2"
+		"webpack-cli": "^4.9.1"
 	}
 }
