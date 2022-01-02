@@ -6,14 +6,14 @@
 	<summary>A simple share link renamer add-in for the Files app</summary>
 	<description><![CDATA[This is an add-in to the Files app, which allows you to customize your share tokens, so your links can be https://mycloud.de/s/mysharedlink instead of https://mycloud.de/s/qPv1SwbU5M2YEoJZ. Just share a file or folder (or click an already shared one) and a new button for renaming the link will appear below the 'Copy URL' button in the menu of the share.
 	
-You can also rename links in the Gallery app.
-
 Please be aware that this is a potential security risk: links could be guessed! We discourage using this app on large instances that host sensitive data! We also encourage you to password protect such shared links.]]></description>
-	<licence>AGPL</licence>
+	<version>3.0.0</version>
+	<licence>agpl</licence>
+	<author homepage="https://jonathan-treffler.de">JonathanTreffler</author>
+	<author>Jonathan Treffler</author>
 	<author homepage="https://decatec.de">DecaTec</author>
 	<author>Fallon Turner</author>
 	<author homepage="https://github.com/LazyShpee">LazyShpee</author>
-	<version>2.7.3</version>
 	<namespace>ShareRenamer</namespace>
 	<category>tools</category>
 	<website>https://github.com/DecaTec/sharerenamer</website>
@@ -22,6 +22,6 @@ Please be aware that this is a potential security risk: links could be guessed! 
 	<repository>https://github.com/DecaTec/sharerenamer</repository>
 	<screenshot>https://github.com/DecaTec/sharerenamer/raw/master/screenshots/sharerenamer.png</screenshot>
 	<dependencies>
-		<nextcloud min-version="14" max-version="17" />
+		<nextcloud min-version="22" max-version="23" />
 	</dependencies>
 </info>

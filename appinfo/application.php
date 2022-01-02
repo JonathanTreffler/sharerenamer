@@ -18,6 +18,13 @@ class Application extends App {
 	 */
 	public function __construct(array $urlParams = []) {
 		parent::__construct('sharerenamer', $urlParams);
-	}
 
+		$container = $this->getContainer();
+		$server = $container->getServer();
+		$eventDispatcher = $server->getEventDispatcher();
+
+		$eventDispatcher->addListener('OCA\Files::loadAdditionalScripts', function () {
+			\OCP\Util::addScript('sharerenamer', 'sharerenamer-main');
+		});
+	}
 }
