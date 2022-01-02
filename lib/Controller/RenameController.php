@@ -25,7 +25,7 @@ class RenameController extends Controller {
 	/**
 	 * @NoAdminRequired
 	 */
-	public function rename(): DataResponse  {
+	public function rename(): DataResponse {
 		$oldToken = $this->request->getParam('old_token');
 		$newToken = $this->request->getParam('new_token');
 		if ($oldToken === null || $newToken === null || $newToken === '') {
@@ -34,7 +34,7 @@ class RenameController extends Controller {
 
 		$result = $this->service->rename($_POST['old_token'], $_POST['new_token']);
 
-		if($result == "pass") {
+		if ($result == "pass") {
 			return new DataResponse("", Http::STATUS_OK);
 		} else {
 			return new DataResponse($result, Http::STATUS_CONFLICT);
