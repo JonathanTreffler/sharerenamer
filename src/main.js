@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import { translate, translatePlural } from 'nextcloud-l10n'
 
+import SharerenamerTab from './SharerenamerTab'
+
 Vue.prototype.t = translate
 Vue.prototype.n = translatePlural
-
-import SharerenamerTab from './SharerenamerTab'
 
 const View = Vue.extend(SharerenamerTab)
 let tabInstance = null
