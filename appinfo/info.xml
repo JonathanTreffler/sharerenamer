@@ -9,13 +9,13 @@
 Please be aware that this is a potential security risk: links could be guessed! We discourage using this app on large instances that host sensitive data! We also encourage you to password protect such shared links.]]></description>
 	<version>3.0.0</version>
 	<licence>agpl</licence>
-	<namespace>ShareRenamer</namespace>
-	<category>tools</category>
 	<author homepage="https://jonathan-treffler.de">JonathanTreffler</author>
 	<author>Jonathan Treffler</author>
 	<author homepage="https://decatec.de">DecaTec</author>
 	<author>Fallon Turner</author>
 	<author homepage="https://github.com/LazyShpee">LazyShpee</author>
+	<namespace>ShareRenamer</namespace>
+	<category>tools</category>
 	<website>https://github.com/DecaTec/sharerenamer</website>
 	<discussion>https://help.nextcloud.com/c/apps/sharerenamer</discussion>
 	<bugs>https://github.com/DecaTec/sharerenamer/issues</bugs>
