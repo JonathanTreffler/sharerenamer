@@ -10,25 +10,22 @@ github:
 
 tasks:
   - name: Nextcloud Server
-    init: |
-      cd gitpod
-      docker-compose pull
-      cd ..
+    #init: |
+    #  cd gitpod
+    #  docker-compose pull
+    #  cd ..
     command: |
       git config core.fileMode false
       chmod -R 777 .
       cd gitpod
       docker-compose up
 
-  - name: Dependency install
+  - name: Dependency install and Frontend
     init: | 
       curl -sS https://getcomposer.org/installer -o ~/composer-setup.php
       sudo php ~/composer-setup.php --install-dir=/bin --filename=composer
       composer --version
       make dev-setup
-    #command: exit
-
-  - name: Frontend
     command: make watch-js
 
   - name: Terminal
