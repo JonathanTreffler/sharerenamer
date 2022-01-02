@@ -20,6 +20,6 @@ Please be aware that this is a potential security risk: links could be guessed! 
 	<repository>https://github.com/DecaTec/sharerenamer</repository>
 	<screenshot>https://github.com/DecaTec/sharerenamer/raw/master/screenshots/sharerenamer.png</screenshot>
 	<dependencies>
-		<nextcloud min-version="22" max-version="22" />
+		<nextcloud min-version="22" max-version="23" />
 	</dependencies>
 </info>
