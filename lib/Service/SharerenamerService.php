@@ -14,7 +14,7 @@ class SharerenamerService {
 		$this->mapper = $mapper;
 	}
 
-	private function handleException($e) {
+	private function handleException(\Exception $e): void {
 		if ($e instanceof DoesNotExistException ||
 			$e instanceof MultipleObjectsReturnedException) {
 			throw new NotFoundException($e->getMessage());
@@ -23,7 +23,7 @@ class SharerenamerService {
 		}
 	}
 
-	public function rename($oldtoken, $newtoken) {
+	public function rename(string $oldtoken, string $newtoken): string {
 		return $this->mapper->trytokeninsert($oldtoken, $newtoken);
 	}
 }

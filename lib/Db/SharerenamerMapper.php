@@ -10,7 +10,7 @@ class SharerenamerMapper extends Mapper {
 		parent::__construct($db, 'share', '\OCA\ShareRenamer\Db\ShareRenamer');
 	}
 
-	public function trytokeninsert($oldtoken, $newtoken) {
+	public function trytokeninsert(string $oldtoken, string $newtoken): string {
 		// Check if new token already exists
 		$sql = 'SELECT COUNT(*) AS n FROM *PREFIX*share WHERE token = ?';
 		$sql = $this->db->prepare($sql);
