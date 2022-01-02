@@ -20,7 +20,11 @@ tasks:
       docker-compose up
 
   - name: Dependency install
-    init: make dev-setup
+    init: | 
+      curl -sS https://getcomposer.org/installer -o ~/composer-setup.php
+      sudo php ~/composer-setup.php --install-dir=/bin --filename=composer
+      composer --version
+      make dev-setup
     command: exit
 
   - name: Frontend
