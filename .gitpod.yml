@@ -13,6 +13,7 @@ tasks:
     init: |
       cd gitpod
       docker-compose pull
+      cd ..
     command: |
       git config core.fileMode false
       chmod -R 777 .
