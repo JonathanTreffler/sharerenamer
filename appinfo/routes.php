@@ -1,4 +1,5 @@
 <?php
+
 return [
 	'resources' => [
 		'sharerenamer' => ['url' => '/sharerenamer']

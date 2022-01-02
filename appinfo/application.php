@@ -3,7 +3,6 @@
 namespace OCA\ShareRenamer\AppInfo;
 
 use OCP\AppFramework\App;
-use OCP\Util;
 
 /**
  * Class Application
@@ -20,12 +19,12 @@ class Application extends App {
 	public function __construct(array $urlParams = []) {
 		parent::__construct('sharerenamer', $urlParams);
 
-        $container = $this->getContainer();
+		$container = $this->getContainer();
 		$server = $container->getServer();
 		$eventDispatcher = $server->getEventDispatcher();
 
-		$eventDispatcher->addListener('OCA\Files::loadAdditionalScripts', function() {
-			\OCP\Util::addScript('sharerenamer', 'sharerenamer-main' );
+		$eventDispatcher->addListener('OCA\Files::loadAdditionalScripts', function () {
+			\OCP\Util::addScript('sharerenamer', 'sharerenamer-main');
 		});
 	}
 }
