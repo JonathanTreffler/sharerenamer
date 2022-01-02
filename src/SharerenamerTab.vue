@@ -1,9 +1,9 @@
 <template>
 	<div>
 		<EmptyContent v-if="shares.length == 0" icon="icon-share">
-			No shares to rename
+			{{ t("sharerenamer", "No link shares to rename") }}
 			<template #desc>
-				You can create shares in the shares tab
+				{{ t("sharerenamer", "You can create link shares in the shares tab") }}
 			</template>
 		</EmptyContent>
 		<AppNavigationItem v-for="share in shares"
