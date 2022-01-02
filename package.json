@@ -28,7 +28,7 @@
 		"@nextcloud/dialogs": "^3.1.2",
 		"@nextcloud/eslint-plugin": "^2.0.0",
 		"@nextcloud/router": "^2.0.0",
-		"@nextcloud/vue": "^4.0.2",
+		"@nextcloud/vue": "^4.3.0",
 		"babel-loader": "^8.2.3",
 		"css-loader": "^5.2.6",
 		"eslint": "^7.32.0",
