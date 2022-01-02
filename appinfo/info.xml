@@ -8,6 +8,7 @@
 	
 Please be aware that this is a potential security risk: links could be guessed! We discourage using this app on large instances that host sensitive data! We also encourage you to password protect such shared links.]]></description>
 	<version>3.0.0</version>
+	<licence>AGPL</licence>
 	<namespace>ShareRenamer</namespace>
 	<category>tools</category>
 	<author homepage="https://jonathan-treffler.de">JonathanTreffler</author>
@@ -20,7 +21,6 @@ Please be aware that this is a potential security risk: links could be guessed! 
 	<bugs>https://github.com/DecaTec/sharerenamer/issues</bugs>
 	<repository>https://github.com/DecaTec/sharerenamer</repository>
 	<screenshot>https://github.com/DecaTec/sharerenamer/raw/master/screenshots/sharerenamer.png</screenshot>
-	<license>AGPL</license>
 	<dependencies>
 		<nextcloud min-version="22" max-version="23" />
 	</dependencies>
