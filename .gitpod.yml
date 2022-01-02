@@ -25,7 +25,7 @@ tasks:
       sudo php ~/composer-setup.php --install-dir=/bin --filename=composer
       composer --version
       make dev-setup
-    command: exit
+    #command: exit
 
   - name: Frontend
     command: make watch-js
