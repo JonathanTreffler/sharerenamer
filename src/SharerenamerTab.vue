@@ -10,7 +10,7 @@
 			:key="share.token"
 			:title="share.token"
 			:editable="true"
-			editPlaceholder="token"
+			edit-placeholder="token"
 			icon="icon-share"
 			@update:title="function(value){rename(share.token, value);}" />
 	</div>
