@@ -5,8 +5,8 @@ github:
     pullRequests: true
     pullRequestsFromForks: true
     addCheck: true
-    addComment: false
-    addBadge: true
+    addComment: true
+    addBadge: false
 
 tasks:
   - name: Nextcloud Server
