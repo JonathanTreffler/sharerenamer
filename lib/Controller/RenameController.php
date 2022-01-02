@@ -3,8 +3,9 @@
 namespace OCA\ShareRenamer\Controller;
 
 use OCP\IRequest;
-use OCP\AppFramework\Controller;
+use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\DataResponse;
+use OCP\AppFramework\Controller;
 
 use OCA\ShareRenamer\Service\SharerenamerService;
 
@@ -30,6 +31,13 @@ class RenameController extends Controller {
 		if ($oldToken === null || $newToken === null || $newToken === '') {
 			throw new \Exception('Request parameters are missing/incorrect.');
 		}
-		return $this->service->rename($_POST['old_token'], $_POST['new_token']);
+
+		$result = $this->service->rename($_POST['old_token'], $_POST['new_token']);
+
+		if($result == "pass") {
+			return new DataResponse("", Http::STATUS_OK);
+		} else {
+			return new DataResponse($result, Http::STATUS_CONFLICT);
+		}
 	}
 }
