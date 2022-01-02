@@ -34,7 +34,7 @@ class RenameController extends Controller {
 
 		$result = $this->service->rename($_POST['old_token'], $_POST['new_token']);
 
-		if ($result == "pass") {
+		if ($result === "pass") {
 			return new DataResponse("", Http::STATUS_OK);
 		} else {
 			return new DataResponse($result, Http::STATUS_CONFLICT);
