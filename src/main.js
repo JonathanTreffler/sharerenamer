@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', function() {
 		const sharerenamerTab = new OCA.Files.Sidebar.Tab({
 			id: 'sharerenamer',
 			name: t('sharerenamer', 'Share Rename'),
-			icon: 'icon-sharerenamer',
+			icon: 'icon-rename',
 
 			mount(el, fileInfo, context) {
 				if (tabInstance) {
