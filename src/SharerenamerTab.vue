@@ -60,9 +60,6 @@ export default {
 		rename(oldToken, newToken) {
 			const self = this
 
-			// console.log(oldToken, newToken)
-
-			// this._baseUrl already ends with /rename, found in routes.php
 			let result = 'error'
 
 			// eslint-disable-next-line
@@ -77,10 +74,8 @@ export default {
 				// will be 'exists', 'userexists' or 'pass'
 				result = msg
 
-				if (result === 'pass') {
-					// console.log(self.getShareByToken(oldToken));
-					self.getShareByToken(oldToken).token = newToken
-				}
+				// console.log(self.getShareByToken(oldToken));
+				self.getShareByToken(oldToken).token = newToken
 			})
 
 			request.fail(function(jqXHR, textStatus) {
