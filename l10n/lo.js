@@ -1,8 +1,6 @@
 OC.L10N.register(
     "sharerenamer",
     {
-    "Error" : "ຜິດພາດ",
-    "Rename" : "ປ່ຽນຊື່",
-    "Cancel" : "ຍົກເລີກ"
+    "Error" : "ຜິດພາດ"
 },
 "nplurals=1; plural=0;");

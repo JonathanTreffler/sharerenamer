@@ -1,6 +1,4 @@
 { "translations": {
-    "Error" : "Սխալ",
-    "Rename" : "Վերանվանել",
-    "Cancel" : "ընդհատել"
+    "Error" : "Սխալ"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

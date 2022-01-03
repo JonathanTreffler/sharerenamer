@@ -1,6 +1,4 @@
 { "translations": {
-    "Error" : "Алдаа",
-    "Rename" : "Нэрлэнэ үү",
-    "Cancel" : "болиулах"
+    "Error" : "Алдаа"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

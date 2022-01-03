@@ -1,6 +1,4 @@
 { "translations": {
-    "Error" : "Səhv",
-    "Rename" : "Adı dəyiş",
-    "Cancel" : "Dayandır"
+    "Error" : "Səhv"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

@@ -1,6 +1,4 @@
 { "translations": {
-    "Error" : "Error",
-    "Rename" : "Renominar",
-    "Cancel" : "Cancellar"
+    "Error" : "Error"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

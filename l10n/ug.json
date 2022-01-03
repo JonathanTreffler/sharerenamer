@@ -1,6 +1,4 @@
 { "translations": {
-    "Error" : "خاتالىق",
-    "Rename" : "ئات ئۆزگەرت",
-    "Cancel" : "ۋاز كەچ"
+    "Error" : "خاتالىق"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

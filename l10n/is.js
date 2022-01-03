@@ -1,15 +1,8 @@
 OC.L10N.register(
     "sharerenamer",
     {
-    "Error" : "Villa",
-    "Rename link" : "Endurnefna tengil",
-    "Rename" : "Endurnefna",
-    "Cancel" : "Hætta við",
-    "Only the following characters are allowed for links: %s" : "Aðeins eftirfarandi stafir eru leyfðir í nöfnum tengla: %s",
-    "Maximum length of a link: 32 characters" : "Hámarkslengd tengils: 32 stafir",
-    "Link {newname} already exists. Please choose another link name." : "Tengillinn {newname} er þegar til staðar. Veldu eitthvað annað nafn.",
-    "Link {newname} cannot be defined. Please choose another link name." : "Ekki er hægt að skilgreina tengilinn {newname}. Veldu eitthvað annað nafn á tengilinn.",
     "ShareRenamer" : "EndurnefningTengla",
-    "A simple share link renamer add-in for the Files app" : "Einföld og hraðvirk endurnefningarviðbót fyrir skráaforritið"
+    "A simple share link renamer add-in for the Files app" : "Einföld og hraðvirk endurnefningarviðbót fyrir skráaforritið",
+    "Error" : "Villa"
 },
 "nplurals=2; plural=(n % 10 != 1 || n % 100 == 11);");

@@ -1,8 +1,6 @@
 OC.L10N.register(
     "sharerenamer",
     {
-    "Error" : "Xato",
-    "Rename" : "Nomni o'zgartiring",
-    "Cancel" : "Bekor qilish"
+    "Error" : "Xato"
 },
 "nplurals=1; plural=0;");

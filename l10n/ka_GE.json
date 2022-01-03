@@ -1,6 +1,4 @@
 { "translations": {
-    "Error" : "შეცდომა",
-    "Rename" : "სახელის შეცვლა",
-    "Cancel" : "უარყოფა"
+    "Error" : "შეცდომა"
 },"pluralForm" :"nplurals=2; plural=(n!=1);"
 }

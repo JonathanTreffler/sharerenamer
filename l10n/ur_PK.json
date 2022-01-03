@@ -1,6 +1,4 @@
 { "translations": {
-    "Error" : "ایرر",
-    "Rename" : "Rename",
-    "Cancel" : "منسوخ کریں"
+    "Error" : "ایرر"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

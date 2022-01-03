@@ -1,6 +1,4 @@
 { "translations": {
-    "Error" : "ข้อผิดพลาด",
-    "Rename" : "เปลี่ยนชื่อ",
-    "Cancel" : "ยกเลิก"
+    "Error" : "ข้อผิดพลาด"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

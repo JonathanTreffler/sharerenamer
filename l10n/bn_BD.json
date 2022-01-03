@@ -1,6 +1,4 @@
 { "translations": {
-    "Error" : "সমস্যা",
-    "Rename" : "পূনঃনামকরণ",
-    "Cancel" : "বাতির"
+    "Error" : "সমস্যা"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

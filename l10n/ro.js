@@ -1,16 +1,8 @@
 OC.L10N.register(
     "sharerenamer",
     {
-    "Error" : "Eroare",
-    "Rename link" : "Redenumire link",
-    "Rename" : "Redenumire",
-    "Cancel" : "Renunță",
-    "Only the following characters are allowed for links: %s" : "Doar următoarele caractere sunt permise pentru link-urile: %s",
-    "Maximum length of a link: 32 characters" : "Lungimea maximă a unui link: 32 de caractere",
-    "Link {newname} already exists. Please choose another link name." : "Link {newname} deja existent. Alege un nou nume pentru acest link.",
-    "Link {newname} cannot be defined. Please choose another link name." : "Link-ul {newname} nu poate fi definit. \nVă rugăm alegeți alt nume pentru link.",
     "ShareRenamer" : "ShareRenamer",
     "A simple share link renamer add-in for the Files app" : "Un simplu add-in de redenumire a link-urilor de share pentru aplicația Files",
-    "This is an add-in to the Files app, which allows you to customize your share tokens, so your links can be https://mycloud.de/s/mysharedlink instead of https://mycloud.de/s/qPv1SwbU5M2YEoJZ. Just share a file or folder (or click an already shared one) and a new button for renaming the link will appear below the 'Copy URL' button in the menu of the share.\n\t\nYou can also rename links in the Gallery app.\n\nPlease be aware that this is a potential security risk: links could be guessed! We discourage using this app on large instances that host sensitive data! We also encourage you to password protect such shared links." : "Acesta este un add-in pentru aplicația Files care vă permite să customizați token-urile de partajare ca link-urile dumneavoastră să fie https://mycloud.de/s/mysharedlink în loc de https://mycloud.de/s/qPv1SwbU5M2YEoJZ. Doar partajați un fișier sau un folder (sau faceți click pe unul deja partajat) și un nou buton de redenumire a link-ului va aparea sub butonul 'Copiere URL' în meniul pentru partajare\n\nPuteți redenumi link-uri și în aplicația Gallery.\n\nVă rugăm să aveți in vedere că această aplicație poate să fie un risc de securitate: link-urile pot sa fie ghicite. Nu vă recomandăm să folositi acest app pe instanțe mari care găzduiesc date sensibile! De altfel vă încurajăm să protejați cu parolă aceste link-uri partajate."
+    "Error" : "Eroare"
 },
 "nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));");

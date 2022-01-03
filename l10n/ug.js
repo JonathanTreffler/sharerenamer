@@ -1,8 +1,6 @@
 OC.L10N.register(
     "sharerenamer",
     {
-    "Error" : "خاتالىق",
-    "Rename" : "ئات ئۆزگەرت",
-    "Cancel" : "ۋاز كەچ"
+    "Error" : "خاتالىق"
 },
 "nplurals=2; plural=(n != 1);");

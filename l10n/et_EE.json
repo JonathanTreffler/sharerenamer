@@ -1,6 +1,4 @@
 { "translations": {
-    "Error" : "Viga",
-    "Rename" : "Nimeta ümber",
-    "Cancel" : "Loobu"
+    "Error" : "Viga"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

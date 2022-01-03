@@ -1,13 +1,8 @@
 OC.L10N.register(
     "sharerenamer",
     {
-    "Error" : "Erro",
-    "Rename link" : "Renomear link",
-    "Rename" : "Renomear",
-    "Cancel" : "Cancelar",
-    "Only the following characters are allowed for links: %s" : "Apenas estes caracteres são permitidos para links: %s",
-    "Link {newname} already exists. Please choose another link name." : "O link {newname} já existe. Por favor, escolha outro nome para o link.",
     "ShareRenamer" : "ShareRenamer",
-    "A simple share link renamer add-in for the Files app" : "Um simples add-in renomeador de links para a aplicação de Ficheiros"
+    "A simple share link renamer add-in for the Files app" : "Um simples add-in renomeador de links para a aplicação de Ficheiros",
+    "Error" : "Erro"
 },
 "nplurals=2; plural=(n != 1);");

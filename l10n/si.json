@@ -1,6 +1,4 @@
 { "translations": {
-    "Error" : "දෝෂය",
-    "Rename" : "නැවත නම් කරන්න",
-    "Cancel" : "අවලංගු කරන්න"
+    "Error" : "දෝෂය"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

@@ -1,8 +1,6 @@
 OC.L10N.register(
     "sharerenamer",
     {
-    "Error" : "Fejl",
-    "Rename" : "Omdøb",
-    "Cancel" : "Annullér"
+    "Error" : "Fejl"
 },
 "nplurals=2; plural=(n != 1);");
