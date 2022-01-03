@@ -11,7 +11,7 @@ A rewrite is currently being worked on to make it compatible with newer versions
 
 ![](screenshots/sharerenamer.png)
 
-This is an add-in to the Files app, which allows you to customize your share tokens, so your links can be https://mycloud.de/s/mysharedlink instead of https://mycloud.de/s/qPv1SwbU5M2YEoJZ. Just share a file or folder (or click an already shared one) and a new button for renaming the link will appear below the 'Copy URL' button in the menu of the share.
+This is an add-in to the Files app, which allows you to customize your share tokens, so your links can be as: https://mycloud.de/s/mysharedlink instead of https://mycloud.de/s/qPv1SwbU5M2YEoJZ. Just share a file or folder (or click an already shared one) and a new button for renaming the link will appear below the "Copy URL" button in the menu of the share.
 
 Please be aware that this is a potential security risk: links could be guessed! We discourage using this app on large instances that host sensitive data! We also encourage you to password protect such shared links.
 
