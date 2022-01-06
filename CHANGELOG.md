@@ -1,5 +1,16 @@
 # Changelog
 
+## 3.0.0
+### Added
+- Support for Nextcloud 22 - 23
+
+### Changed
+- Complete rewrite of the frontend
+- There is no button in the share menu to rename the share anymore because the app now has its own tab in the sidebar, where the links can be edited.
+
+### Removed
+- Dropped support for Nextcloud 9 - 17
+
 ## 2.7.3
 ### Fixed
 - Multiple shared links with the same name could be created when using PostgreSQL.
