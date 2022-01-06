@@ -16,11 +16,11 @@ Please be aware that this is a potential security risk: links could be guessed! 
 	<author homepage="https://github.com/LazyShpee">LazyShpee</author>
 	<namespace>ShareRenamer</namespace>
 	<category>tools</category>
-	<website>https://github.com/DecaTec/sharerenamer</website>
+	<website>https://github.com/JonathanTreffler/sharerenamer</website>
 	<discussion>https://help.nextcloud.com/c/apps/sharerenamer</discussion>
-	<bugs>https://github.com/DecaTec/sharerenamer/issues</bugs>
-	<repository>https://github.com/DecaTec/sharerenamer</repository>
-	<screenshot>https://github.com/DecaTec/sharerenamer/raw/master/screenshots/sharerenamer.png</screenshot>
+	<bugs>https://github.com/JonathanTreffler/sharerenamer/issues</bugs>
+	<repository>https://github.com/JonathanTreffler/sharerenamer</repository>
+	<screenshot>https://github.com/JonathanTreffler/sharerenamer/raw/master/screenshots/sharerenamer.png</screenshot>
 	<dependencies>
 		<nextcloud min-version="22" max-version="23" />
 	</dependencies>
