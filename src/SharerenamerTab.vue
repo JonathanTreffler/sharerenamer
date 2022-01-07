@@ -77,7 +77,7 @@ export default {
 							errorMessage = t('sharerenamer', 'A link share cannot be the same as a registered username')
 						}
 					}
-					console.log(errorMessage)
+
 					OC.Notification.show(t('sharerenamer', 'Error') + ': ' + errorMessage, { type: 'error' })
 				})
 		},
