@@ -1,6 +1,5 @@
 { "translations": {
     "ShareRenamer" : "Megosztás átnevező",
-    "A simple share link renamer add-in for the Files app" : "Egy egyszerű megosztási hivatkozás átnevező kiegészítő a Fájlok alkalmazáshoz",
     "Error" : "Hiba"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

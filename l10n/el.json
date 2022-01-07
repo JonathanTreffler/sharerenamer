@@ -1,6 +1,5 @@
 { "translations": {
     "ShareRenamer" : "Μετονομασία συνδέσμου",
-    "A simple share link renamer add-in for the Files app" : "Ένα απλό πρόσθετο μετονομασίας συνδέσμων για την εφαρμογή \"Αρχεία\"",
     "Error" : "Σφάλμα"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
