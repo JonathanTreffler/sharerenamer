@@ -3,22 +3,17 @@
 
 # ShareRenamer
 
-The app is only compatible up to Nextcloud 17.
-
-A rewrite is currently being worked on to make it compatible with newer versions. A pre release compatible with Nextcloud 22 can be downloaded [here](https://github.com/JonathanTreffler/sharerenamer/files/7216628/sharerenamer.zip).
+This Nextcloud app allows you to customize your share tokens, so your links can be like https://your-nextcloud.com/s/mysharedlink instead of https://your-nextcloud.com/s/qPv1SwbU5M2YEoJZ. Just share a file or folder normally and customize the link in the sharerenamer tab in the sidebar.
 
 ## A simple Nextcloud app that lets you customize file/folder share links
 
 ![](screenshots/sharerenamer.png)
-
-This is an add-in to the Files app, which allows you to customize your share tokens, so your links can be https://mycloud.de/s/mysharedlink instead of https://mycloud.de/s/qPv1SwbU5M2YEoJZ. Just share a file or folder (or click an already shared one) and a new button for renaming the link will appear below the 'Copy URL' button in the menu of the share.
-
-Please be aware that this is a potential security risk: links could be guessed! We discourage using this app on large instances that host sensitive data! We also encourage you to password protect such shared links.
+![](screenshots/sharerenamer2.png)
 
 ## Requirements
-* Nextcloud 9-17 (not compatible to Nextcloud 18+)
+* Nextcloud 22 - 23
 
-## Install
+## Installation
 ### Nextcloud app store (*recommended*)
 Just install the app from the [Nextcloud app store](https://apps.nextcloud.com/apps/sharerenamer). It can be found under the 'tools' category.
 
@@ -41,6 +36,7 @@ make build-js-production
 
 ## Security
 - Share Tokens can currently not be set to the same string as any registered username, so do not use this app if users are not supposed to be able to find out any other registered usernames.
+- Links could be guessed! We discourage using this app on large instances that host sensitive data! We also encourage you to password protect such shared links.
 
 ## Development
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/JonathanTreffler/sharerenamer/)
