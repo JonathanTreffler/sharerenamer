@@ -39,6 +39,9 @@ make build-js-production
 ```
 * Enable the app in the Apps section of your Nextcloud.
 
+## Security
+- Share Tokens can currently not be set to the same string as any registered username, so do not use this app if users are not supposed to be able to find out any other registered usernames.
+
 ## Development
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/JonathanTreffler/sharerenamer/)
 
