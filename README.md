@@ -39,8 +39,8 @@ make build-js-production
 - Links could be guessed! We discourage using this app on large instances that host sensitive data! We also encourage you to password protect such shared links.
 
 ## Known Issues:
-- Changes to the link shares only show up in the Sharerenamer Tab after the sidebar has been closed and opened again.
-- The copy button of the Shares tab only copies the new link after the sidebar has been closed and opened again.
+- Changes to the link shares only show up in the Sharerenamer Tab after the sidebar has been closed and opened again
+- The copy button of the Shares tab only copies the new link after the sidebar has been closed and opened again
 
 (please don't create issue for these)
 
