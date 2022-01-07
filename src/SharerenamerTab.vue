@@ -36,7 +36,6 @@ export default {
 			token: null,
 			fileInfo: {},
 			shares: [],
-			baseUrl: generateUrl('/apps/sharerenamer'),
 		}
 	},
 	computed: {
@@ -61,29 +60,26 @@ export default {
 		rename(oldToken, newToken) {
 			const self = this
 
-			let result = 'error'
-
-			// eslint-disable-next-line
-			const request = $.ajax({
-				url: this.baseUrl + '/rename',
-				data: { old_token: oldToken, new_token: newToken },
-				method: 'POST',
-				async: false,
+			axios.post(generateUrl('/apps/sharerenamer/rename'), {
+				old_token: oldToken,
+				new_token: newToken,
 			})
+				.then(function(response) {
+					// console.log(self.getShareByToken(oldToken));
+					self.getShareByToken(oldToken).token = newToken
+				}).catch(function(error) {
+					let errorMessage = t('sharerenamer', 'Could not change link token')
 
-			request.done(function(msg) {
-				// will be 'exists', 'userexists' or 'pass'
-				result = msg
-
-				// console.log(self.getShareByToken(oldToken));
-				self.getShareByToken(oldToken).token = newToken
-			})
-
-			request.fail(function(jqXHR, textStatus) {
-				OC.Notification.show(t('sharerenamer', 'Error') + ': ' + textStatus, { type: 'error' })
-			})
-
-			return result
+					if (error.response) {
+						if (error.response.data === 'exists') {
+							errorMessage = t('sharerenamer', 'A link share with that token already exists')
+						} else if (error.response.data === 'userexists') {
+							errorMessage = t('sharerenamer', 'A link share cannot be the same as a registered username')
+						}
+					}
+					console.log(errorMessage)
+					OC.Notification.show(t('sharerenamer', 'Error') + ': ' + errorMessage, { type: 'error' })
+				})
 		},
 		update(fileInfo) {
 			const self = this

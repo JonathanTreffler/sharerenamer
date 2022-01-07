@@ -25,6 +25,7 @@ class SharerenamerMapper extends Mapper {
 		}
 
 		// Check if the share has the same name as a user
+		// TODO: Find out if this is still neccessary (this was added by a previous maintainer)
 		$sql2 = 'SELECT COUNT(*) AS n FROM *PREFIX*users WHERE LOWER(uid) = ?';
 		$sql2 = $this->db->prepare($sql2);
 		$toLower = strtolower($newtoken);
