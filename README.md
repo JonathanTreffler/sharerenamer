@@ -38,6 +38,12 @@ make build-js-production
 - Share Tokens can currently not be set to the same string as any registered username, so do not use this app if users are not supposed to be able to find out any other registered usernames.
 - Links could be guessed! We discourage using this app on large instances that host sensitive data! We also encourage you to password protect such shared links.
 
+## Known Issues:
+- Changes to the link shares only show up in the Sharerenamer Tab after the sidebar has been closed and opened again.
+- The copy button of the Shares tab only copies the new link after the sidebar has been closed and opened again.
+
+(please don't create issue for these)
+
 ## Development
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/JonathanTreffler/sharerenamer/)
 
