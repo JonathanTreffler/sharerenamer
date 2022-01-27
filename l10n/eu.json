@@ -1,5 +1,7 @@
 { "translations": {
     "ShareRenamer" : "Partekatzeak berrizendatzeko tresna",
+    "Link token" : "Estekaren tokena",
+    "Change link token" : "Aldatu estekaren tokena",
     "Error" : "Errorea"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
