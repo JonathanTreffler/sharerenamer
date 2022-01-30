@@ -1,5 +1,15 @@
 { "translations": {
     "ShareRenamer" : "Megosztás átnevező",
-    "Error" : "Hiba"
+    "A simple app that lets you customize file/folder share links" : "Egy egyszerű alkalmazás, mellyel testreszabhatja a fájl- és mappamegosztási hivatkozásokat",
+    "This app allows you to customize your share tokens, so your links can be like https://your-nextcloud.com/s/mysharedlink instead of https://your-nextcloud.com/s/qPv1SwbU5M2YEoJZ. Just share a file or folder normally and customize the link in the sharerenamer tab in the sidebar.\n\t\nPlease be aware that this is a potential security risk: links could be guessed! We discourage using this app on large instances that host sensitive data! We also encourage you to password protect such shared links." : "Ezzel az alkalmazással testreszabhatja a megosztási tokeneket, így a hivatkozások inkább így nézhetnek ki: https://your-nextcloud.com/s/mysharedlink mint így: https://your-nextcloud.com/s/qPv1SwbU5M2YEoJZ. Csak osszon meg a szokásos módon egy fájlt vagy mappát, és szabja testre a hivatkozást az oldalsávon lévő megosztásátnevező lapon.\n\nVegye figyelembe, hogy ez lehetséges biztonsági kockázat: a hivatkozások kitalálhatóvá válnak! Nem javasoljuk az alkalmazást olyan nagy példányokon, melyek bizalmas adatokat tárolnak! Azt is javasoljuk, hogy védje jelszóval az ilyen megosztási hivatkozásokat.",
+    "Link token" : "Hivatkozástoken",
+    "Change link token" : "Hivatkozástoken módosítása",
+    "Could not change link token" : "A hivatkozástoken nem módosítható",
+    "A link share with that token already exists" : "Már létezik hivatkozásos megosztás azzal a tokennel",
+    "A link share cannot be the same as a registered username" : "A hivatkozásos megosztás nem lehet ugyanaz, mint egy regisztrált felhasználónév",
+    "Error" : "Hiba",
+    "No link shares to rename" : "Nincsenek átnevezendő hivatkozásos megosztások",
+    "You can create link shares in the shares tab" : "Hivatkozásos megosztásokat hozhat létre a megosztások lapon",
+    "Share Rename" : "Megosztás átnevezése"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
