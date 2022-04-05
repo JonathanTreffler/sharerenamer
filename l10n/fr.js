@@ -14,4 +14,4 @@ OC.L10N.register(
     "You can create link shares in the shares tab" : "Vous pouvez créer des liens de partage dans l'onglet de partage",
     "Share Rename" : "Renommer le lien de partage"
 },
-"nplurals=2; plural=(n > 1);");
+"nplurals=3; plural=(n==0 || n==1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");
