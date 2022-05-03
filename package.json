@@ -23,7 +23,7 @@
 		"stylelint:fix": "stylelint css/*.css css/*.scss src/**/*.css src/**/*.scss src/*.vue src/**/*.vue --fix"
 	},
 	"dependencies": {
-		"@babel/eslint-parser": "^7.16.5",
+		"@babel/eslint-parser": "^7.17.0",
 		"@nextcloud/axios": "^1.8.0",
 		"@nextcloud/dialogs": "^3.1.2",
 		"@nextcloud/eslint-plugin": "^2.0.0",
