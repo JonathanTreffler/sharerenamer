@@ -1,6 +1,7 @@
 <template>
 	<div>
-		<EmptyContent v-if="shares.length == 0" icon="icon-share">
+		<EmptyContent v-if="shares.length == 0"
+			icon="icon-share">
 			{{ t("sharerenamer", "No link shares to rename") }}
 			<template #desc>
 				{{ t("sharerenamer", "You can create link shares in the shares tab") }}
@@ -43,7 +44,7 @@ export default {
 		 * Returns the current active tab
 		 * needed because AppSidebarTab also uses $parent.activeTab
 		 *
-		 * @returns {string}
+		 * @return {string}
 		 */
 		activeTab() {
 			return this.$parent.activeTab
