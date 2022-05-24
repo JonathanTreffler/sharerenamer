@@ -11,5 +11,5 @@
     "No link shares to rename" : "No hay enlaces compartidos que renombrar",
     "You can create link shares in the shares tab" : "Puedes crear enlaces en la pestaña Compartir",
     "Share Rename" : "Share Rename"
-},"pluralForm" :"nplurals=2; plural=(n != 1);"
+},"pluralForm" :"nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;"
 }
