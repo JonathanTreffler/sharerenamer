@@ -1,6 +1,6 @@
 OC.L10N.register(
     "sharerenamer",
     {
-    "Error" : "Xato"
+    "Error" : "Error"
 },
 "nplurals=1; plural=0;");
