@@ -33,3 +33,4 @@ timezones
 webpack.*
 sharerenamer.key
 gitpod
+.gitpod.yml
