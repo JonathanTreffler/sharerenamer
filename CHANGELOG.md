@@ -1,5 +1,12 @@
 # Changelog
 
+## 3.1.0
+### Added
+- Support for Nextcloud 25
+
+### Changed
+- Updates are now compiled, bundled, signed and uploaded to the nextcloud appstore using [krankerl](https://github.com/ChristophWurst/krankerl)
+
 ## 3.0.1
 ### Added
 - Support for Nextcloud 24
