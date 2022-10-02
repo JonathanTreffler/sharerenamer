@@ -70,6 +70,9 @@ docker exec -it -u 33 gitpod_app_1 php occ
 ## Creating a new Release
 
 Steps:
-1. Place appstore private key at ./sharerenamer.key
+1. Place appstore private key at $HOME/.nextcloud/certificates/sharerenamer.key (/home/gitpod/.nextcloud/certificates/sharerenamer.key for gitpod)
 1. `krankerl login --appstore <appstore api key>`
 1. `krankerl package`
+1. `krankerl sign --package`
+1. Create a new Github release and attach the build/artifacts/sharerenamer.tar.gz file
+1. `krankerl publish <github release attached file public url>`
