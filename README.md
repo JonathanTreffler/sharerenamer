@@ -72,6 +72,9 @@ docker exec -it -u 33 gitpod_app_1 php occ
 Steps:
 1. Place appstore private key at $HOME/.nextcloud/certificates/sharerenamer.key (/home/gitpod/.nextcloud/certificates/sharerenamer.key for gitpod)
 1. `krankerl login --appstore <appstore api key>`
+1. Bump app version using `krankerl version (major|minor|patch)`
+1. Commit app version bump (`git commit -m "Bumped app version to <version>"`)
+1. Push commit to Github (`git push`)
 1. `krankerl package`
 1. `krankerl sign --package`
 1. Create a new Github release and attach the build/artifacts/sharerenamer.tar.gz file
