@@ -67,3 +67,8 @@ docker exec -it -u 33 gitpod_app_1 php occ
 
 (It is fine to have these static logins, because gitpod has acess control built in and no sensitive data is stored in these dev servers)
 
+## Creating new Release
+
+Steps:
+1. `krankerl login --appstore <app store api key>`
+1. `krankerl package`

@@ -1,0 +1,6 @@
+[package]
+before_cmds = [
+    "make composer",
+    "make npm-init",
+    "make build-js-production"
+]

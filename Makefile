@@ -11,31 +11,10 @@ cert_dir=$(HOME)/certs
 build_tools_directory=$(CURDIR)/build/tools
 composer=$(shell which composer 2> /dev/null)
 
-appstore:
-	mkdir -p $(sign_dir)
-	rsync -a \
-	--exclude=build \
-	--exclude=.git \
-	--exclude=.github \
-	--exclude=.tx \
-	--exclude=build \
-	--exclude=.gitignore \
-	--exclude=l10n/.gitkeep \
-	--exclude=Makefile \
-	--exclude=screenshots \
-	--exclude=gitpod \
-	--exclude=node_modules \
-	$(project_dir) $(sign_dir)
-
-	@echo "Signing..."
-	tar -czf $(build_dir)/$(app_name).tar.gz \
-		-C $(sign_dir) $(app_name)
-	openssl dgst -sha512 -sign $(cert_dir)/$(app_name).key $(build_dir)/$(app_name).tar.gz | openssl base64
-
 all: dev-setup lint build-js-production test
 
 # Dev env management
-dev-setup: clean clean-dev composer npm-init
+dev-setup: clean clean-dev composer npm-init krankerl-install
 
 
 # Installs and updates the composer dependencies. If composer is not installed
@@ -58,6 +37,9 @@ npm-init:
 
 npm-update:
 	npm update
+
+krankerl-install:
+	cargo install --git https://github.com/ChristophWurst/krankerl
 
 # Building
 build-js:
