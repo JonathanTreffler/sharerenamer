@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.2.0
+### Added
+- Support for Nextcloud 26
+
 ## 3.1.0
 ### Added
 - Support for Nextcloud 25
