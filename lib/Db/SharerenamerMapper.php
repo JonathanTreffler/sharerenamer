@@ -3,11 +3,11 @@
 namespace OCA\ShareRenamer\Db;
 
 use \OCP\IDBConnection;
-use \OCP\AppFramework\Db\Mapper;
+use OCP\AppFramework\Db\QBMapper;
 
-class SharerenamerMapper extends Mapper {
+class SharerenamerMapper extends QBMapper {
 	public function __construct(IDBConnection $db) {
-		parent::__construct($db, 'share', '\OCA\ShareRenamer\Db\ShareRenamer');
+		parent::__construct($db, 'share', \OCA\ShareRenamer\Db\ShareRenamer::class);
 	}
 
 	public function trytokeninsert(string $oldtoken, string $newtoken): string {
