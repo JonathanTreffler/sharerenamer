@@ -33,7 +33,7 @@ services:
       - 8081:80
 
   app:
-    image: nextcloud
+    image: 'local/nextcloud'
     build:
       context: .
       dockerfile: Dockerfile

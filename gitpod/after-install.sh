@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 run_as() {
     if [ "$(id -u)" = 0 ]; then

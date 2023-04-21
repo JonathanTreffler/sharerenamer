@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Both gitpod and Nextcloud need read/write acess
 # Obviously not recommended for a production system

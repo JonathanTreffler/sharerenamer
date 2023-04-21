@@ -16,7 +16,8 @@ tasks:
     #  cd ..
     command: |
       git config core.fileMode false
-      chmod -R 777 .
+      sudo chown -R www-data:www-data .
+      sudo chmod -R 777 .
       cd gitpod
       docker-compose up
 
