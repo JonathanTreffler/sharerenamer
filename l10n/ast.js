@@ -1,6 +1,6 @@
 OC.L10N.register(
     "sharerenamer",
     {
-    "Error" : "Fallu"
+    "Error" : "Error"
 },
 "nplurals=2; plural=(n != 1);");
