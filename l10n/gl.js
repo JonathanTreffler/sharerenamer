@@ -10,8 +10,8 @@ OC.L10N.register(
     "A link share with that token already exists" : "Xa existe unha ligazón compartida con ese testemuño",
     "A link share cannot be the same as a registered username" : "Unha ligazón compartida non pode ser o mesmo que un nome de usuario rexistrado",
     "Error" : "Erro",
-    "No link shares to rename" : "Non hai ligazóns compartidas para cambiarlle o nome",
-    "You can create link shares in the shares tab" : "Podes crear ligazóns compartidas na lapela compartir",
+    "No link shares to rename" : "Non hai ligazóns  para compartir para cambiarlle o nome",
+    "You can create link shares in the shares tab" : "Pode crear ligazóns  para compartir na lapela compartir",
     "Share Rename" : " Renomear compartidos"
 },
 "nplurals=2; plural=(n != 1);");
