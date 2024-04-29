@@ -1,12 +1,4 @@
-github:
-  prebuilds:
-    master: true
-    branches: true
-    pullRequests: true
-    pullRequestsFromForks: true
-    addCheck: true
-    addComment: true
-    addBadge: false
+image: gitpod/workspace-full:2024-04-16-12-16-24
 
 tasks:
   - name: Nextcloud Server
