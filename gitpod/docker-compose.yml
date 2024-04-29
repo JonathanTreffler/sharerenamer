@@ -1,6 +1,6 @@
 # This is for gitpod, DO NOT USE THIS TO HOST YOUR PRODUCTION NEXTCLOUD
 
-version: '2'
+version: '3.8'
 
 volumes:
   nextcloud:
