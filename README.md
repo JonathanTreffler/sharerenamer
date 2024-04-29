@@ -12,7 +12,7 @@ This Nextcloud app allows you to customize your share tokens, so your links can 
 ![](screenshots/sharerenamer2.png)
 
 ## Requirements
-* Nextcloud 24 - 26
+* Nextcloud 29
 
 ## Installation
 ### Nextcloud app store (*recommended*)
