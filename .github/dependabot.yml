@@ -6,7 +6,6 @@ updates:
     interval: daily
     time: "03:00"
     timezone: Europe/Berlin
-  open-pull-requests-limit: 10
   labels:
   - dependencies
 - package-ecosystem: npm
@@ -15,7 +14,6 @@ updates:
     interval: daily
     time: "03:00"
     timezone: Europe/Berlin
-  open-pull-requests-limit: 10
   labels:
   - dependencies
 - package-ecosystem: "github-actions"
