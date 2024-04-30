@@ -2,6 +2,7 @@ version: 2
 updates:
 - package-ecosystem: composer
   directory: "/"
+  open-pull-requests-limit: 20
   schedule:
     interval: daily
     time: "03:00"
@@ -10,6 +11,7 @@ updates:
   - dependencies
 - package-ecosystem: npm
   directory: "/"
+  open-pull-requests-limit: 20
   schedule:
     interval: daily
     time: "03:00"
