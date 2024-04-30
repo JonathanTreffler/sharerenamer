@@ -1,35 +1,38 @@
 <template>
 	<div>
-		<EmptyContent v-if="shares.length == 0"
-			icon="icon-share">
-			{{ t("sharerenamer", "No link shares to rename") }}
-			<template #desc>
-				{{ t("sharerenamer", "You can create link shares in the shares tab") }}
+		<NcEmptyContent v-if="shares.length == 0"
+			icon="icon-share"
+			:name="t('sharerenamer', 'No link shares to rename')"
+			:description="t('sharerenamer', 'You can create link shares in the shares tab')">
+			<template #icon>
+				<ShareVariant />
 			</template>
-		</EmptyContent>
-		<AppNavigationItem v-for="share in shares"
+		</NcEmptyContent>
+		<NcAppNavigationItem v-for="share in shares"
 			:key="share.token"
-			:title="share.token"
+			:name="share.token"
 			:editable="true"
 			:edit-placeholder="t('sharerenamer', 'Link token')"
 			:edit-label="t('sharerenamer', 'Change link token')"
 			icon="icon-share"
-			@update:title="function(value){rename(share.token, value);}" />
+			@update:name="function(value){rename(share.token, value);}" />
 	</div>
 </template>
 
 <script>
-import axios from '@nextcloud/axios'
+import NcAppNavigationItem from '@nextcloud/vue/dist/Components/NcAppNavigationItem.js'
+import NcEmptyContent from '@nextcloud/vue/dist/Components/NcEmptyContent.js'
 
-import AppNavigationItem from '@nextcloud/vue/dist/Components/AppNavigationItem'
-import EmptyContent from '@nextcloud/vue/dist/Components/EmptyContent'
+import axios from '@nextcloud/axios'
 import { generateUrl, generateOcsUrl } from '@nextcloud/router'
+import ShareVariant from 'vue-material-design-icons/ShareVariant'
 
 export default {
 	name: 'SharerenamerTab',
 	components: {
-		AppNavigationItem,
-		EmptyContent,
+		NcAppNavigationItem,
+		NcEmptyContent,
+		ShareVariant,
 	},
 	data() {
 		return {
