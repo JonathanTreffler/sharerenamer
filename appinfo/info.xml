@@ -7,7 +7,7 @@
 	<description><![CDATA[This app allows you to customize your share tokens, so your links can be like https://your-nextcloud.com/s/mysharedlink instead of https://your-nextcloud.com/s/qPv1SwbU5M2YEoJZ. Just share a file or folder normally and customize the link in the sharerenamer tab in the sidebar.
 	
 Please be aware that this is a potential security risk: links could be guessed! We discourage using this app on large instances that host sensitive data! We also encourage you to password protect such shared links.]]></description>
-	<version>3.3.0</version>
+	<version>3.3.1</version>
 	<licence>agpl</licence>
 	<author homepage="https://jonathan-treffler.de">JonathanTreffler</author>
 	<author>Jonathan Treffler</author>
