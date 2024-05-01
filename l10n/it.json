@@ -2,14 +2,14 @@
     "ShareRenamer" : "ShareRenamer",
     "A simple app that lets you customize file/folder share links" : "Una semplice applicazione che ti consente di personalizzare i collegamenti di condivisione di file/cartelle",
     "This app allows you to customize your share tokens, so your links can be like https://your-nextcloud.com/s/mysharedlink instead of https://your-nextcloud.com/s/qPv1SwbU5M2YEoJZ. Just share a file or folder normally and customize the link in the sharerenamer tab in the sidebar.\n\t\nPlease be aware that this is a potential security risk: links could be guessed! We discourage using this app on large instances that host sensitive data! We also encourage you to password protect such shared links." : "Questa applicazione ti consente di personalizzare i tuoi token di condivisione, quindi i tuoi link possono essere per esempio https://your-nextcloud.com/s/mysharedlink invece di https://your-nextcloud.com/s/qPv1SwbU5M2YEoJZ. Basta condividere normalmente un file o una cartella e personalizzare il collegamento nella scheda ShareRenamer nella barra laterale.\n\nTieni presente che questo è un potenziale rischio per la sicurezza: i collegamenti potrebbero essere indovinati! Sconsigliamo l'utilizzo di questa applicazione su istanze di grandi dimensioni che ospitano dati sensibili! Ti invitiamo inoltre a proteggere con password tali collegamenti condivisi.",
+    "No link shares to rename" : "Nessuna condivisione di collegamento da rinominare",
+    "You can create link shares in the shares tab" : "Puoi creare condivisioni di link nella scheda condivisioni",
     "Link token" : "Token di collegamento",
     "Change link token" : "Cambia token di collegamento",
     "Could not change link token" : "Impossibile modificare il token di collegamento",
     "A link share with that token already exists" : "Esiste già una condivisione di collegamento con quel token",
     "A link share cannot be the same as a registered username" : "Una condivisione link non può essere la stessa di un nome utente registrato",
     "Error" : "Errore",
-    "No link shares to rename" : "Nessuna condivisione di collegamento da rinominare",
-    "You can create link shares in the shares tab" : "Puoi creare condivisioni di link nella scheda condivisioni",
     "Share Rename" : "Condividi Rinomina"
 },"pluralForm" :"nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;"
 }

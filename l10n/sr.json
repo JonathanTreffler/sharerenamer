@@ -2,14 +2,14 @@
     "ShareRenamer" : "Преименовање дељења",
     "A simple app that lets you customize file/folder share links" : "Једноставна апликација која вам омогућава да прилагодите линкове за дељење фајла/фолдера",
     "This app allows you to customize your share tokens, so your links can be like https://your-nextcloud.com/s/mysharedlink instead of https://your-nextcloud.com/s/qPv1SwbU5M2YEoJZ. Just share a file or folder normally and customize the link in the sharerenamer tab in the sidebar.\n\t\nPlease be aware that this is a potential security risk: links could be guessed! We discourage using this app on large instances that host sensitive data! We also encourage you to password protect such shared links." : "Ова апликација вам омогућава да прилагодите своје токене за дељење, тако да ваше везе могу бити као https://your-nextcloud.com/s/mysharedlink уместо https://your-nextcloud.com/s/qPv1SwbU5M2YEoJZ. Само нормално делите датотеку или фасциклу и прилагодите везу на картици sharerenamer на бочној траци.\n\t\nИмајте на уму да је ово потенцијални безбедносни ризик: везе се могу погодити! Не препоручујемо коришћење ове апликације на великим инстанцама које хостују осетљиве податке! Такође вас подстичемо да заштитите лозинком такве дељене везе.",
+    "No link shares to rename" : "Нема линк дељења којима може да се измени име",
+    "You can create link shares in the shares tab" : "Линк дељења можете да креирате у картици дељења",
     "Link token" : "Линк жетон",
     "Change link token" : "Измени линк жетон",
     "Could not change link token" : "Није могао да се измени линк жетон",
     "A link share with that token already exists" : "Линк дељење са тим жетоном већ постоји",
     "A link share cannot be the same as a registered username" : "Линк дељење не може да буде исто као и регистровано корисничко име",
     "Error" : "Грешка",
-    "No link shares to rename" : "Нема линк дељења којима може да се измени име",
-    "You can create link shares in the shares tab" : "Линк дељења можете да креирате у картици дељења",
     "Share Rename" : "Промена имена дељења"
 },"pluralForm" :"nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);"
 }
