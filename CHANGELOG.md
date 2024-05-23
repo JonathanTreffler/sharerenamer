@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.3.2
+### Changed
+- removed composer autoloading (app has no non-dev depencencies anyways)
+
 ## 3.3.1
 ### Changed
 - Updated many dependencies
