@@ -3,7 +3,6 @@
 namespace OCA\ShareRenamer\Controller;
 
 use OCA\ShareRenamer\AppInfo\Application;
-use OCA\ShareRenamer\Service\SharerenamerService;
 
 use OCP\Share\IManager;
 use OCP\Share\IShare;
