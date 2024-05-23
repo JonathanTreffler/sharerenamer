@@ -65,21 +65,17 @@ export default {
 			const self = this
 
 			axios.post(generateUrl('/apps/sharerenamer/rename'), {
-				old_token: oldToken,
-				new_token: newToken,
+				oldToken,
+				newToken,
 			})
 				.then(function(response) {
-					// console.log(self.getShareByToken(oldToken));
 					self.getShareByToken(oldToken).token = newToken
 				}).catch(function(error) {
 					let errorMessage = t('sharerenamer', 'Could not change link token')
 
-					if (error.response) {
-						if (error.response.data === 'exists') {
-							errorMessage = t('sharerenamer', 'A link share with that token already exists')
-						} else if (error.response.data === 'userexists') {
-							errorMessage = t('sharerenamer', 'A link share cannot be the same as a registered username')
-						}
+					if (error?.response?.data?.errorMessage) {
+						errorMessage += ": ";
+						errorMessage += error.response.data.errorMessage;
 					}
 
 					OC.Notification.show(t('sharerenamer', 'Error') + ': ' + errorMessage, { type: 'error' })
