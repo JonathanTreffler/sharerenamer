@@ -1,5 +1,11 @@
 # Changelog
 
+# 3.4.0
+### Changed
+- refactored entire codebase
+  - while I made changes to some parts the app to make it compatible with new Nextcloud versions, the core code of the app had basically not changed since I took over the repo from the previous maintainer, it was time to change that
+  - no more interacting with the shares database directy
+
 ## 3.3.2
 ### Changed
 - removed composer autoloading (app has no non-dev depencencies anyways)
