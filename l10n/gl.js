@@ -9,8 +9,6 @@ OC.L10N.register(
     "Link token" : "Testemuño da ligazón",
     "Change link token" : "Cambiar o testemuño da ligazón",
     "Could not change link token" : "Non foi posíbel cambiar o testemuño da ligazón",
-    "A link share with that token already exists" : "Xa existe unha ligazón compartida con ese testemuño",
-    "A link share cannot be the same as a registered username" : "Unha ligazón compartida non pode ser o mesmo que un nome de usuario rexistrado",
     "Error" : "Erro",
     "Share Rename" : " Renomear compartidos"
 },

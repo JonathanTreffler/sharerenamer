@@ -9,8 +9,6 @@ OC.L10N.register(
     "Link token" : "連結權杖",
     "Change link token" : "更改連結權杖",
     "Could not change link token" : "無法更改連結權杖",
-    "A link share with that token already exists" : "具有相同令牌的連結分享已經存在",
-    "A link share cannot be the same as a registered username" : "連結分享不能與註冊用戶名相同",
     "Error" : "錯誤",
     "Share Rename" : "重新命名分享"
 },

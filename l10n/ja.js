@@ -9,8 +9,6 @@ OC.L10N.register(
     "Link token" : "リンクトークン",
     "Change link token" : "リンクトークンを変更",
     "Could not change link token" : "リンクトークンを変更できませんでした",
-    "A link share with that token already exists" : "そのリンクトークンの共有リンクはすでに存在しています",
-    "A link share cannot be the same as a registered username" : "リンク共有は登録者名と同じにはできません",
     "Error" : "エラー",
     "Share Rename" : "共有名変更"
 },

@@ -9,8 +9,6 @@ OC.L10N.register(
     "Link token" : "Bağlantı kodu",
     "Change link token" : "Bağlantı kodunu değiştir",
     "Could not change link token" : "Bağlantı kodu değiştirilemedi",
-    "A link share with that token already exists" : "Bu kodu kullanan bir paylaşım bağlantısı zaten var",
-    "A link share cannot be the same as a registered username" : "Paylaşım bağlantısı kayıtlı kullanıcı adı ile aynı olamaz ",
     "Error" : "Hata",
     "Share Rename" : "Paylaşımı yeniden adlandır"
 },

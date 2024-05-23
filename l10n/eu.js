@@ -9,8 +9,6 @@ OC.L10N.register(
     "Link token" : "Estekaren tokena",
     "Change link token" : "Aldatu estekaren tokena",
     "Could not change link token" : "Ezin izan da estekaren tokena aldatu",
-    "A link share with that token already exists" : "Badago token horrekin esteka partekatze bat.",
-    "A link share cannot be the same as a registered username" : "Esteka partekatzea ezin da erregistratutako erabiltzaile-izen bera izan",
     "Error" : "Errorea",
     "Share Rename" : "Partekatu izen aldatzea"
 },

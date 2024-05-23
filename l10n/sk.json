@@ -7,8 +7,6 @@
     "Link token" : "Token odkazu",
     "Change link token" : "Zmeniť token odkazu",
     "Could not change link token" : "Nemôžem zmeniť token odkazu",
-    "A link share with that token already exists" : "Zdieľanie odkazu s týmto tokenom už existuje",
-    "A link share cannot be the same as a registered username" : "Zdieľanie odkazom nemôže byť rovnaké ako registrované používateľské meno",
     "Error" : "Chyba",
     "Share Rename" : "Premenovať zdieľanie"
 },"pluralForm" :"nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);"

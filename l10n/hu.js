@@ -9,8 +9,6 @@ OC.L10N.register(
     "Link token" : "Hivatkozástoken",
     "Change link token" : "Hivatkozástoken módosítása",
     "Could not change link token" : "A hivatkozástoken nem módosítható",
-    "A link share with that token already exists" : "Már létezik hivatkozásos megosztás azzal a tokennel",
-    "A link share cannot be the same as a registered username" : "A hivatkozásos megosztás nem lehet ugyanaz, mint egy regisztrált felhasználónév",
     "Error" : "Hiba",
     "Share Rename" : "Megosztás átnevezése"
 },

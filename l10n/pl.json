@@ -7,8 +7,6 @@
     "Link token" : "Token linku",
     "Change link token" : "Zmień token linku",
     "Could not change link token" : "Nie udało się zmienić tokena linku",
-    "A link share with that token already exists" : "Udostępnianie linku z tym tokenem już istnieje",
-    "A link share cannot be the same as a registered username" : "Udostępniany link nie może być taki sam jak zarejestrowana nazwa użytkownika",
     "Error" : "Błąd",
     "Share Rename" : "Zmień nazwę udostępnienia"
 },"pluralForm" :"nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);"

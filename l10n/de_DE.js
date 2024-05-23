@@ -9,8 +9,6 @@ OC.L10N.register(
     "Link token" : "Link-Token",
     "Change link token" : "Link-Token anpassen",
     "Could not change link token" : "Der Link-Token konnte nicht geändert werden",
-    "A link share with that token already exists" : "Ein Freigabe-Link mit diesem Token existiert bereits",
-    "A link share cannot be the same as a registered username" : "Ein Freigabe-Link darf nicht mit einem registrierten Benutzernamen übereinstimmen",
     "Error" : "Fehler",
     "Share Rename" : "Freigabe umbenennen"
 },

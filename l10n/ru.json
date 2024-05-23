@@ -7,8 +7,6 @@
     "Link token" : "Токен ссылки",
     "Change link token" : "Изменить токен ссылки",
     "Could not change link token" : "Не удалось изменить токен ссылки",
-    "A link share with that token already exists" : "Публичный ресурс ссылки с таким токеном уже существует",
-    "A link share cannot be the same as a registered username" : "Общий ресурс ссылки не может быть таким же, как зарегистрированное имя пользователя",
     "Error" : "Ошибка",
     "Share Rename" : "Переименовать ссылку"
 },"pluralForm" :"nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);"

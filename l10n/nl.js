@@ -9,8 +9,6 @@ OC.L10N.register(
     "Link token" : "Link token",
     "Change link token" : "Wijzig link token",
     "Could not change link token" : "Link token kan niet gewijzigd worden",
-    "A link share with that token already exists" : "Er bestaat reeds een gedeelde link met deze token",
-    "A link share cannot be the same as a registered username" : "Een gedeelde link kan niet hetzelfde zijn als een geregistreerde gebruikersnaam",
     "Error" : "Fout",
     "Share Rename" : "Gedeelde link hernoemen"
 },

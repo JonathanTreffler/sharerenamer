@@ -9,8 +9,6 @@ OC.L10N.register(
     "Link token" : "Линк жетон",
     "Change link token" : "Измени линк жетон",
     "Could not change link token" : "Није могао да се измени линк жетон",
-    "A link share with that token already exists" : "Линк дељење са тим жетоном већ постоји",
-    "A link share cannot be the same as a registered username" : "Линк дељење не може да буде исто као и регистровано корисничко име",
     "Error" : "Грешка",
     "Share Rename" : "Промена имена дељења"
 },

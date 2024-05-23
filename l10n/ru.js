@@ -9,8 +9,6 @@ OC.L10N.register(
     "Link token" : "Токен ссылки",
     "Change link token" : "Изменить токен ссылки",
     "Could not change link token" : "Не удалось изменить токен ссылки",
-    "A link share with that token already exists" : "Публичный ресурс ссылки с таким токеном уже существует",
-    "A link share cannot be the same as a registered username" : "Общий ресурс ссылки не может быть таким же, как зарегистрированное имя пользователя",
     "Error" : "Ошибка",
     "Share Rename" : "Переименовать ссылку"
 },

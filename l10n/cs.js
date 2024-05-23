@@ -9,8 +9,6 @@ OC.L10N.register(
     "Link token" : "Token odkazu",
     "Change link token" : "Změnit token odkazu",
     "Could not change link token" : "Nedaří se změnit token odkazu",
-    "A link share with that token already exists" : "Už existuje sdílení odkazem se stejným tokenem",
-    "A link share cannot be the same as a registered username" : "Sdílení odkazem nemůže být shodné se zaregistrovaným uživatelským jménem",
     "Error" : "Chyba",
     "Share Rename" : "Přejmenovat sdílení"
 },

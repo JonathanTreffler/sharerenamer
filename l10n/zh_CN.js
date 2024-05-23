@@ -9,8 +9,6 @@ OC.L10N.register(
     "Link token" : "链接令牌",
     "Change link token" : "更改链接令牌",
     "Could not change link token" : "无法改变链接令牌",
-    "A link share with that token already exists" : "有该令牌的分享链接已经存在",
-    "A link share cannot be the same as a registered username" : "链接分享不能与已注册的用户名相同",
     "Error" : "错误",
     "Share Rename" : "分享重命名"
 },
