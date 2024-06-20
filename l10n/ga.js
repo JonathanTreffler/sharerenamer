@@ -1,6 +1,15 @@
 OC.L10N.register(
     "sharerenamer",
     {
-    "Error" : "Earráid"
+    "ShareRenamer" : "Comhroinn Athainmnigh",
+    "A simple app that lets you customize file/folder share links" : "Aip shimplí a ligeann duit naisc chomhroinnte comhaid/fillteán a shaincheapadh",
+    "This app allows you to customize your share tokens, so your links can be like https://your-nextcloud.com/s/mysharedlink instead of https://your-nextcloud.com/s/qPv1SwbU5M2YEoJZ. Just share a file or folder normally and customize the link in the sharerenamer tab in the sidebar.\n\t\nPlease be aware that this is a potential security risk: links could be guessed! We discourage using this app on large instances that host sensitive data! We also encourage you to password protect such shared links." : "Ligeann an aip seo duit do chuid comharthaí scaireanna a shaincheapadh, ionas gur féidir le do naisc a bheith cosúil le https://your-nextcloud.com/s/mysharedlink in ionad https://your-nextcloud.com/s/qPv1SwbU5M2YEoJZ. Ní gá ach comhad nó fillteán a roinnt de ghnáth agus an nasc a shaincheapadh sa chluaisín sharerenamer sa bharra taoibh.\n\t\nTabhair faoi deara le do thoil gur riosca slándála féideartha é seo: d’fhéadfaí naisc a thomhas! Ní mholaimid an aip seo a úsáid ar chásanna móra a dhéanann óstáil ar shonraí íogaire! Molaimid duit freisin naisc chomhroinnte den sórt sin a chosaint le pasfhocal.",
+    "No link shares to rename" : "Níl aon nasc le hathainmniú",
+    "You can create link shares in the shares tab" : "Is féidir leat naisc naisc a chruthú sa chluaisín scaireanna",
+    "Link token" : "Comhartha nasc",
+    "Change link token" : "Athraigh comhartha nasc",
+    "Could not change link token" : "Níorbh fhéidir comhartha an naisc a athrú",
+    "Error" : "Earráid",
+    "Share Rename" : "Comhroinn Athainmnigh"
 },
 "nplurals=5; plural=(n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n<11 ? 3 : 4);");
