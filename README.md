@@ -6,13 +6,16 @@
 
 This Nextcloud app allows you to customize your share tokens, so your links can be like https://your-nextcloud.com/s/mysharedlink instead of https://your-nextcloud.com/s/qPv1SwbU5M2YEoJZ. Just share a file or folder normally and customize the link in the sharerenamer tab in the sidebar.
 
+> [!NOTE]
+> You don't need this app anymore after updating to Nextcloud 31 (Hub 10) as the share renaming feature is now integrated natively into the Nextcloud core (you just need to enable it in the admin settings)
+
 ## A simple Nextcloud app that lets you customize file/folder share links
 
 ![](screenshots/sharerenamer.png)
 ![](screenshots/sharerenamer2.png)
 
 ## Requirements
-* Nextcloud 29
+* Nextcloud 29 or 30
 
 ## Installation
 ### Nextcloud app store (*recommended*)
@@ -45,32 +48,10 @@ make build-js-production
 
 (please don't create issue for these)
 
-## Development
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/JonathanTreffler/sharerenamer/)
-
-It will automatically spin up and configure a full Nextcloud, MariaDB and PhpMyAdmin server.
-
-### Nextcloud Login:
-**Username:** dev
-
-**Password:** t2qQ1C6ktYUv7
-
-### PhpMyAdmin Login:
-**Username:** nextcloud
-
-**Password:** wdGq73jQB0p373gLdf6yLRj5
-
-### OCC
-```bash
-docker exec -it -u 33 gitpod_app_1 php occ
-```
-
-(It is fine to have these static logins, because gitpod has acess control built in and no sensitive data is stored in these dev servers)
-
 ## Creating a new Release
 
 Steps:
-1. Place appstore private key at $HOME/.nextcloud/certificates/sharerenamer.key (/home/gitpod/.nextcloud/certificates/sharerenamer.key for gitpod)
+1. Place appstore private key at $HOME/.nextcloud/certificates/sharerenamer.key
 1. `krankerl login --appstore <appstore api key>`
 1. Bump app version using `krankerl version (major|minor|patch)`
 1. Add app update information to CHANGELOG.md
