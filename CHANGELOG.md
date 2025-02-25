@@ -1,5 +1,14 @@
 # Changelog
 
+
+# 3.5.0
+
+This will be the last release of this app as you don't need it anymore after updating to Nextcloud 31 (Hub 10) because the share renaming feature is now integrated natively into the Nextcloud core 🥳.
+
+For more information see [this github issue](https://github.com/JonathanTreffler/sharerenamer/issues/340).
+
+Thank you all for the support over the years 💚 and special thanks to @DecaTec for originally creating the app.
+
 # 3.4.0
 ### Changed
 - refactored entire codebase
