@@ -3,7 +3,6 @@ OC.L10N.register(
     {
     "ShareRenamer" : "Přejmenávávání sdílení",
     "A simple app that lets you customize file/folder share links" : "Jednoduchá aplikace která umožňuje přizpůsobit si odkazy na sdílení souboru/složky",
-    "This app allows you to customize your share tokens, so your links can be like https://your-nextcloud.com/s/mysharedlink instead of https://your-nextcloud.com/s/qPv1SwbU5M2YEoJZ. Just share a file or folder normally and customize the link in the sharerenamer tab in the sidebar.\n\t\nPlease be aware that this is a potential security risk: links could be guessed! We discourage using this app on large instances that host sensitive data! We also encourage you to password protect such shared links." : "Tato aplikace umožňuje přizpůsobovat tokeny sdílení, takže vaše odkazy mohou být jako https://your-nextcloud.com/s/mysharedlink namísto https://your-nextcloud.com/s/qPv1SwbU5M2YEoJZ. Stačí jen nasdílet soubor nebo složku a přizpůsobit odkaz na kartě Přejmenování sdílení v postranním panelu.\n\nUvědomte si, že toto je potenciální bezpečnostní riziko: odkazy mohou být uhodnuty! Nedoporučujeme používat tuto aplikaci na velkých instancích, které hostí citlivá data. Také takové sdílené odkazy doporučujeme chránit heslem.",
     "No link shares to rename" : "Žádná sdílení odkazem k přejmenování",
     "You can create link shares in the shares tab" : "Sdílení odkazem je možné vytvořit na kartě sdílení",
     "Link token" : "Token odkazu",
