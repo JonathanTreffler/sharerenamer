@@ -3,12 +3,12 @@ OC.L10N.register(
     {
     "ShareRenamer" : "ShareRenamer",
     "A simple app that lets you customize file/folder share links" : "Лесно за използване приложение, което ви позволява да персонализирате връзките за споделяне на файл/папка",
+    "Could not change link token" : "Токена за връзка не можа да се промени",
+    "Error" : "Грешка",
     "No link shares to rename" : "Няма връзка за споделяне, която да се преименува",
     "You can create link shares in the shares tab" : "Можете да създадете връзки за споделяния в раздела за споделяния",
     "Link token" : "Токен за връзка",
     "Change link token" : "Промяна на токена за връзка",
-    "Could not change link token" : "Токена за връзка не можа да се промени",
-    "Error" : "Грешка",
     "Share Rename" : "Преименуване на ръзка за споделяне"
 },
 "nplurals=2; plural=(n != 1);");
